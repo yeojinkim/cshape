@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.20)  14 OCT 2015 17:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.20)  14 OCT 2015 18:09
 entering extended mode
 **report.tex
 (C:\Users\w66_000\Documents\GitHub\cshape\report\report.tex
@@ -401,61 +401,61 @@ Overfull \hbox (37.65472pt too wide) in paragraph at lines 69--70
 ra-he-dron. This ver-tices are 3 coordinates$[]$. 
  []
 
-<img/cube3.png, id=26, 931.22906pt x 933.4875pt>
+<img/cube3.png, id=27, 931.22906pt x 933.4875pt>
 File: img/cube3.png Graphic file (type png)
  <use img/cube3.png>
 Package pdftex.def Info: img/cube3.png used on input line 85.
 (pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
 
-<img/cube2.png, id=28, 931.22906pt x 933.4875pt>
+<img/cube2.png, id=29, 931.22906pt x 933.4875pt>
 File: img/cube2.png Graphic file (type png)
  <use img/cube2.png>
 Package pdftex.def Info: img/cube2.png used on input line 89.
 (pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
 
-<img/cube1.png, id=29, 931.22906pt x 933.4875pt>
+<img/cube1.png, id=30, 931.22906pt x 933.4875pt>
 File: img/cube1.png Graphic file (type png)
  <use img/cube1.png>
 Package pdftex.def Info: img/cube1.png used on input line 93.
 (pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
 
-<img/cube4.png, id=30, 931.22906pt x 933.4875pt>
+<img/cube4.png, id=31, 931.22906pt x 933.4875pt>
 File: img/cube4.png Graphic file (type png)
  <use img/cube4.png>
 Package pdftex.def Info: img/cube4.png used on input line 97.
 (pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
 
-<img/bunny3.png, id=31, 1042.64531pt x 933.4875pt>
+<img/bunny3.png, id=32, 1042.64531pt x 933.4875pt>
 File: img/bunny3.png Graphic file (type png)
  <use img/bunny3.png>
 Package pdftex.def Info: img/bunny3.png used on input line 105.
 (pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
 
-<img/bunny2.png, id=32, 1042.64531pt x 933.4875pt>
+<img/bunny2.png, id=33, 1042.64531pt x 933.4875pt>
 File: img/bunny2.png Graphic file (type png)
  <use img/bunny2.png>
 Package pdftex.def Info: img/bunny2.png used on input line 109.
 (pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
 
-<img/bunny1.png, id=33, 1042.64531pt x 933.4875pt>
+<img/bunny1.png, id=34, 1042.64531pt x 933.4875pt>
 File: img/bunny1.png Graphic file (type png)
  <use img/bunny1.png>
 Package pdftex.def Info: img/bunny1.png used on input line 113.
 (pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
 
-<img/bunny4.png, id=34, 1042.64531pt x 933.4875pt>
+<img/bunny4.png, id=35, 1042.64531pt x 933.4875pt>
 File: img/bunny4.png Graphic file (type png)
  <use img/bunny4.png>
 Package pdftex.def Info: img/bunny4.png used on input line 117.
 (pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
 
-<img/T1.png, id=35, 1077.27469pt x 933.4875pt>
+<img/T1.png, id=36, 1077.27469pt x 933.4875pt>
 File: img/T1.png Graphic file (type png)
  <use img/T1.png>
 Package pdftex.def Info: img/T1.png used on input line 125.
 (pdftex.def)             Requested size: 197.29623pt x 170.95473pt.
 
-<img/T2.png, id=36, 1077.27469pt x 933.4875pt>
+<img/T2.png, id=37, 1077.27469pt x 933.4875pt>
 File: img/T2.png Graphic file (type png)
  <use img/T2.png>
 Package pdftex.def Info: img/T2.png used on input line 129.
@@ -494,23 +494,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/ellipsoid1_bug.png, id=38, 1205.2528pt x 933.4875pt>
+<img/ellipsoid1_bug.png, id=39, 1205.2528pt x 933.4875pt>
 File: img/ellipsoid1_bug.png Graphic file (type png)
 
 <use img/ellipsoid1_bug.png>
 Package pdftex.def Info: img/ellipsoid1_bug.png used on input line 137.
-(pdftex.def)             Requested size: 140.92792pt x 109.15065pt.
+(pdftex.def)             Requested size: 375.80542pt x 291.07315pt.
 
 (C:\Users\w66_000\Documents\GitHub\cshape\report\report.bbl
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.brf [1
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.brf)
+\tf@brf=\write5
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
-\tf@brf=\write5
-
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
  [2 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/cube3.png> <C:/Users/w
 66_000/Documents/GitHub/cshape/report/img/cube2.png> <C:/Users/w66_000/Document
@@ -523,23 +519,24 @@ itHub/cshape/report/img/T1.png> <C:/Users/w66_000/Documents/GitHub/cshape/repor
 t/img/T2.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ellipsoid1_b
 ug.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
- (C:\Users\w66_000\Documents\GitHub\cshape\report\report.aux)
+
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 5198CA8EDD73F535FDA1195F110B94E8;282.
 Package rerunfilecheck Info: File `report.brf' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: A4F7E1FDF58BF484BD98F98BBCC04FA3;35.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 145.
  ) 
 Here is how much of TeX's memory you used:
- 6773 strings out of 493921
- 97167 string characters out of 3144870
- 182443 words of memory out of 3000000
- 9940 multiletter control sequences out of 15000+200000
+ 6778 strings out of 493921
+ 97211 string characters out of 3144870
+ 182470 words of memory out of 3000000
+ 9944 multiletter control sequences out of 15000+200000
  11390 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,8n,29p,472b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,29p,473b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
@@ -548,9 +545,9 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (3 pages, 926690 bytes).
+Output written on report.pdf (3 pages, 927769 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

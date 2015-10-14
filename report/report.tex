@@ -64,11 +64,11 @@
 The algorithm is as follows:
 \begin{enumerate}
 \item Create points in 4D using 3 coordinates : $\mathbf{(x,y, z, x^2+y^2+z^2)}$
-\item Compute convex hull in 4D by calling qhull with 4D points.
-\item Looping through all facets in 4D convex hull, 
-\subitem - Save the vertices of a facets as the vertices of tetrahedron. This vertices are 3 coordinates$\mathbf{(x,y,z)}$. 
+\item Compute convex hull in 4D by calling qhull\cite{Qhull} with 4D points.
+\item Looping through all facets in 4D convex hull,
+\subitem - Save the vertices of a facets as the vertices of tetrahedron. This vertices are 3 coordinates$\mathbf{(x,y,z)}$.
 \subitem - Compute the sign volume of tetrahedron
-\subitem - If the normal vector of tetrahedron points downward and the volume is not zero, generate faces of tetrahedron. In other words, if this tetrahedron is lower convex hull and all points are not coplanar, render this tetrahedron.  
+\subitem - If the normal vector of tetrahedron points downward and the volume is not zero, generate faces of tetrahedron. In other words, if this tetrahedron is lower convex hull and all points are not coplanar, render this tetrahedron.
 \end{enumerate}
 \subsection{software}
 OS : Window 8.1K\\
@@ -76,7 +76,7 @@ IDE : Visual Studio 2013\\
 *NOTE :  I use the dynamic library for freeglut.
 
 \section{Example Output}
- Here are example results. Each image in Fig. \ref{fig:cube} and Fig. \ref{fig:bunny} shows that (a) A set of points, (b) a set of edges in Delanauy triangulation, (c)a set of faces in Delanauy triangulation, and (d) a set of total tetrahedra. We can observe that Delanauy triangulation does not have intersections between edges. Otherwise, a simple projection of whole tetrahedra has multiple intersections between edges(Fig. \ref{fig:T}).
+ Here are example results. Each image in Fig. \ref{fig:cube} and Fig. \ref{fig:bunny} shows that (a) A set of points, (b) a set of edges in Delanauy triangulation, (c)a set of faces in Delanauy triangulation, and (d) a set of total tetrahedra. We can observe that Delanauy triangulation does not have intersections between edges. Otherwise, a simple projection of whole tetrahedra has multiple intersections between edges (Fig. \ref{fig:T}).
 \begin{figure*}[h]
  \centering
   \subfigure[]{
@@ -134,7 +134,7 @@ IDE : Visual Studio 2013\\
 There are some limitations on this code. First, this code doesn't handle the duplication of faces while add tetrahedron to be draw. Also, I found some visual artifact on the Delanauy triangulation of ellipsoid(Fig. \ref{fig:Ellipsoid}). I could not find the reason why.
 \begin{figure*}[htb]
   \begin{center}
-  \includegraphics[width=0.3\textwidth]{img/ellipsoid1_bug.png}
+  \includegraphics[width=0.8\textwidth]{img/ellipsoid1_bug.png}
   \caption{Ellipsoid bug}
   \label{fig:Ellipsoid}
   \end{center}
