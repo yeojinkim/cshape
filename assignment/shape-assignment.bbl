@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{abk-anvra-98}
+N.~Amenta, M.Bern, and M.~Kamvysselis.
+\newblock A new voronoi-based reconstruction algorithm.
+\newblock In {\em SIGGRAPH, Orlando, FL}, 1998.
+
+\bibitem{em-tdas-94}
+H.~Edelsbrunner and E.~P. M{\"u}cke.
+\newblock Three-dimensional alpha shapes.
+\newblock {\em ACM Trans. Graph.}, 13(1):43--72, January 1994.
+
+\end{thebibliography}
