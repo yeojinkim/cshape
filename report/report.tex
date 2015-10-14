@@ -77,6 +77,12 @@ IDE : Visual Studio 2013\\
 
 \section{Example Output}
  Here are example results. Each image in Fig. \ref{fig:cube} ~ Fig. \ref{fig:teeth} shows that (a) A set of points, (b) a set of edges in Delanauy triangulation, (c)a set of faces in Delanauy triangulation, and (d) a set of total tetrahedra. We can observe that Delanauy triangulation does not have intersections between edges. Otherwise, a simple projection of whole tetrahedra has multiple intersections between edges (Fig. \ref{fig:T}).
+\section{Know bugs/limitations}
+There are some limitations on this code. First, this code doesn't handle the duplication of faces while add tetrahedron to be draw. Also, I found some visual artifact on the Delanauy triangulation of ellipsoid(Fig. \ref{fig:Ellipsoid}). I could not find the reason why.
+
+\bibliographystyle{plain}
+\bibliography{report}
+
 \begin{figure*}[hbt]
  \centering
   \subfigure[]{
@@ -315,7 +321,7 @@ IDE : Visual Studio 2013\\
     \includegraphics[width=0.22\textwidth]{img/teeth4.png}
      \label{fig:teethOption4}
   }\hspace{-3mm}
-  \caption{A teeth example \label{fig:spoon}}
+  \caption{A teeth example \label{fig:teeth}}
 \end{figure*}
 \begin{figure*}[hbt]
  \centering
@@ -329,8 +335,6 @@ IDE : Visual Studio 2013\\
   }\hspace{-3mm}
   \caption{Difference between projection result of Delanauy triangulation and all tetrahedra.\label{fig:T}}
 \end{figure*}
-\section{Know bugs/limitations}
-There are some limitations on this code. First, this code doesn't handle the duplication of faces while add tetrahedron to be draw. Also, I found some visual artifact on the Delanauy triangulation of ellipsoid(Fig. \ref{fig:Ellipsoid}). I could not find the reason why.
 \begin{figure*}[htb]
   \begin{center}
   \includegraphics[width=0.8\textwidth]{img/ellipsoid1_bug.png}
@@ -338,10 +342,6 @@ There are some limitations on this code. First, this code doesn't handle the dup
   \label{fig:Ellipsoid}
   \end{center}
 \end{figure*}
-
-\bibliographystyle{plain}
-\bibliography{report}
-
 \end{document}
 
 
