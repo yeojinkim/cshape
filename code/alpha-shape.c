@@ -35,7 +35,6 @@ void AlphaShape( unsigned int alpha )
 	tFace faceTetra = NULL;
 	tVertex vertexTetra = NULL;
 	int signVolTetra = -1;
-	coordT* center = NULL;
 	double radius=0.0;
 
 	NEW(faceTetra, tsFace);
