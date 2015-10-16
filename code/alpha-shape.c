@@ -36,8 +36,7 @@ void AlphaShape( unsigned int alpha )
 	tVertex vertexTetra = NULL;
 	int signVolTetra = -1;
 	coordT* center = NULL;
-	double a=.0, b=.0, c=.0, d=.0;
-	double sqauredRadius=0.0;
+	double radius=0.0;
 
 	NEW(faceTetra, tsFace);
 
@@ -93,14 +92,10 @@ void AlphaShape( unsigned int alpha )
 		}
 		
 		//Compute Radius
-		a = facet->center[0] - tetra->vertex[0]->v[0];
-		b = facet->center[1] - tetra->vertex[0]->v[1];
-		c = facet->center[2] - tetra->vertex[0]->v[2];
-		d = facet->center[3] - tetra->vertex[0]->v[3];
-		sqauredRadius = a * a + b * b + c * c + d * d;
+		radius = qh_pointdist(facet->center, tetra->vertex[0], 4);
 		
 		//If radius is bigger than alpha, remove tetra. 
-		if (sqauredRadius > alpha)
+		if (radius*radius > alpha)
 		{
 			DELETE(tetras, tetra);
 			continue;
