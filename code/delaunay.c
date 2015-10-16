@@ -87,14 +87,14 @@ void Delaunay(void)
 			//get the id of the vertex (4 points)
 			tetra->vertex[vid++] = all_v[qh_pointid(vertex->point)];
 		}
-	
+
 		//Compute the sign volume of tetrahedron
 		faceTetra->vertex[0] = tetra->vertex[0];
 		faceTetra->vertex[1] = tetra->vertex[1];
 		faceTetra->vertex[2] = tetra->vertex[2];
 		vertexTetra = tetra->vertex[3];
 		signVolTetra = VolumeSign(faceTetra, vertexTetra);
-
+	
 		//if the normal vector of tetrahedron points downward(=lower convex hull) and the volume is not zero, 
 		//generate faces. (I didn't care about duplications of faces)
 		if (facet->normal[3] < 0 && signVolTetra != 0 )	
