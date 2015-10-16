@@ -99,6 +99,7 @@ void AlphaShape( unsigned int alpha )
 		d = facet->center[3] - tetra->vertex[0]->v[3];
 		radius = sqrt(a * a + b * b + c * c + d * d);
 		
+		//If radius is bigger than alpha, remove tetra. 
 		if (radius > alpha)
 		{
 			DELETE(tetras, tetra);
