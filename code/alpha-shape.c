@@ -24,7 +24,7 @@ void AlphaShape( unsigned int alpha )
 	int vsize = 0;
 	int id = 0;
 
-	static char* options = (char*)"delaunay C-4 QJ Pp";
+	static char* options = (char*)"delaunay QJ Pp";
 	coordT *pt = NULL;
 	int curlong, totlong;
 	tTetra tetra;
@@ -36,7 +36,7 @@ void AlphaShape( unsigned int alpha )
 	tVertex vertexTetra = NULL;
 	int signVolTetra = -1;
 	double radius=0.0;
-
+	double* center = NULL;
 	NEW(faceTetra, tsFace);
 
 	//
@@ -91,8 +91,9 @@ void AlphaShape( unsigned int alpha )
 		}
 		
 		//Compute Radius
-		radius = qh_pointdist(facet->center, tetra->vertex[0], 4);
-		
+		center = qh_getcenter(facet->vertices);
+		radius = qh_pointdist(center, tetra->vertex[0], 4);
+
 		//If radius is bigger than alpha, remove tetra. 
 		if (radius*radius > alpha)
 		{
