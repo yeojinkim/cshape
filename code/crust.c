@@ -32,6 +32,11 @@ void	Crust( void )
 	vertexT **vertexp = NULL;
 	tList voronoiVertex = NULL;
 	tVertex center = NULL;
+	double maxDistance = -1.0;
+	double vorDistance = 0.0;
+	tList ptr_vorv;
+	tVertex poleVertex;
+	tVertex currVertex;
 	
 	//Count the number of points
 	ptr_v = vertices;
@@ -93,8 +98,35 @@ void	Crust( void )
 		}
 	}
 
-	//Compute Pole
+	//Compute a pole and an antipole
+	ptr_v = vertices;
+	do {
+		ptr_vorv = ptr_v->vvlist;
+		
+		//Find a pole
+		do{
+			//Compute the distance between a voronoi cite and a voronoi vertex
+			vorDistance = qh_pointdist(((tVertex*)ptr_vorv->p), ptr_v->v, 3);
+			
+			//If current voronoi vertex is farther than other candidates, store it as current and best candidates for pole
+			if (vorDistance > maxDistance)
+			{
+				//
+				poleVertex->ispole = false;
 
+				//
+				poleVertex = (tVertex*)ptr_vorv->p;
+				poleVertex->ispole = true;
+				maxDistance = vorDistance;
+			}
+
+			ptr_vorv = ptr_vorv->next;
+		} while (ptr_vorv != ptr_v->vvlist);
+		
+		//Find an antipole 
+		// ~~~
+		ptr_v = ptr_v->next;
+	} while (ptr_v != vertices);
 
 
 	free(pt);
