@@ -1,0 +1,791 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.20)  14 OCT 2015 19:04
+entering extended mode
+**report.tex
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen114
+\WF@size=\dimen115
+\c@WF@wrappedlines=\count100
+\WF@box=\box28
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pseudocode\pseudocode.sty"
+** 
+** Document Style `pseudocode' - environment 
+** by D.L. Kreher and D.R. Stinson 
+** 
+** The pseudocode environment was originally developed for the book
+** Combinatorial Algorithms: Enumeration, Generation, and Search
+** CRC Press, 1999. 
+Package: pseudocode 
+\pcode@width=\skip49
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancybox\fancybox.sty"
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box29
+\shadowsize=\dimen116
+\@Sbox=\box30
+\do@VerbBox=\toks27
+\the@fancyput=\toks28
+\this@fancyput=\toks29
+\EndVerbatimTokens=\toks30
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@pseudocode=\count101
+\c@pseudonum=\count102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen117
+\Hy@linkcounter=\count103
+\Hy@pagecounter=\count104
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count105
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing ON on input line 4461.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\backref.sty"
+Package: backref 2012/07/25 v1.38 Bibliographical back referencing
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+\c@Hy@tempcnt=\count106
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen118
+\Fld@menulength=\count107
+\Field@Width=\dimen119
+\Fld@charsize=\dimen120
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing ON on input line 6308.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count108
+\c@Item=\count109
+\c@Hfootnote=\count110
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count111
+\c@bookmark@seq@number=\count112
+\Hy@SectionHShift=\skip50
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip51
+\subfigcapskip=\skip52
+\subfigcaptopadj=\dimen121
+\subfigbottomskip=\skip53
+\subfigcapmargin=\dimen122
+\subfiglabelskip=\skip54
+\c@subfigure=\count113
+\c@lofdepth=\count114
+\c@subtable=\count115
+\c@lotdepth=\count116
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip55
+\subfig@bottom=\skip56
+)
+\c@theorem=\count117
+
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen123
+\scratchbox=\box31
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen124
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks32
+)
+\AtBeginShipoutBox=\box32
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 57.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count124
+)
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
+
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.out)
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.out)
+\@outlinefile=\write4
+LaTeX Font Info:    Try loading font information for U+lasy on input line 66.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (37.65472pt too wide) in paragraph at lines 69--70
+[]| \OT1/cmr/m/n/10.95 - Save the ver-tices of a facets as the ver-tices of tet
+ra-he-dron. This ver-tices are 3 coordinates$[]$. 
+ []
+
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.bbl
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.brf)
+\tf@brf=\write5
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+<img/cube3.png, id=49, 931.22906pt x 933.4875pt>
+File: img/cube3.png Graphic file (type png)
+ <use img/cube3.png>
+Package pdftex.def Info: img/cube3.png used on input line 91.
+(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
+
+<img/cube2.png, id=51, 931.22906pt x 933.4875pt>
+File: img/cube2.png Graphic file (type png)
+ <use img/cube2.png>
+Package pdftex.def Info: img/cube2.png used on input line 95.
+(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
+
+<img/cube1.png, id=52, 931.22906pt x 933.4875pt>
+File: img/cube1.png Graphic file (type png)
+ <use img/cube1.png>
+Package pdftex.def Info: img/cube1.png used on input line 99.
+(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
+
+<img/cube4.png, id=53, 931.22906pt x 933.4875pt>
+File: img/cube4.png Graphic file (type png)
+ <use img/cube4.png>
+Package pdftex.def Info: img/cube4.png used on input line 103.
+(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
+
+<img/ellipsoid3.png, id=54, 1205.2528pt x 933.4875pt>
+File: img/ellipsoid3.png Graphic file (type png)
+ <use img/ellipsoid3.png>
+Package pdftex.def Info: img/ellipsoid3.png used on input line 111.
+(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
+
+<img/ellipsoid2.png, id=55, 1205.2528pt x 933.4875pt>
+File: img/ellipsoid2.png Graphic file (type png)
+ <use img/ellipsoid2.png>
+Package pdftex.def Info: img/ellipsoid2.png used on input line 115.
+(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
+
+<img/ellipsoid1.png, id=56, 1205.2528pt x 933.4875pt>
+File: img/ellipsoid1.png Graphic file (type png)
+ <use img/ellipsoid1.png>
+Package pdftex.def Info: img/ellipsoid1.png used on input line 119.
+(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
+
+<img/ellipsoid4.png, id=57, 1205.2528pt x 933.4875pt>
+File: img/ellipsoid4.png Graphic file (type png)
+ <use img/ellipsoid4.png>
+Package pdftex.def Info: img/ellipsoid4.png used on input line 123.
+(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
+
+<img/bunny3.png, id=58, 1042.64531pt x 933.4875pt>
+File: img/bunny3.png Graphic file (type png)
+ <use img/bunny3.png>
+Package pdftex.def Info: img/bunny3.png used on input line 131.
+(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
+
+<img/bunny2.png, id=59, 1042.64531pt x 933.4875pt>
+File: img/bunny2.png Graphic file (type png)
+ <use img/bunny2.png>
+Package pdftex.def Info: img/bunny2.png used on input line 135.
+(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
+
+<img/bunny1.png, id=60, 1042.64531pt x 933.4875pt>
+File: img/bunny1.png Graphic file (type png)
+ <use img/bunny1.png>
+Package pdftex.def Info: img/bunny1.png used on input line 139.
+(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
+
+<img/bunny4.png, id=61, 1042.64531pt x 933.4875pt>
+File: img/bunny4.png Graphic file (type png)
+ <use img/bunny4.png>
+Package pdftex.def Info: img/bunny4.png used on input line 143.
+(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
+
+<img/U3.png, id=62, 1030.60031pt x 933.4875pt>
+File: img/U3.png Graphic file (type png)
+ <use img/U3.png>
+Package pdftex.def Info: img/U3.png used on input line 151.
+(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
+
+<img/U2.png, id=63, 1030.60031pt x 933.4875pt>
+File: img/U2.png Graphic file (type png)
+ <use img/U2.png>
+Package pdftex.def Info: img/U2.png used on input line 155.
+(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
+
+<img/U1.png, id=64, 1030.60031pt x 933.4875pt>
+File: img/U1.png Graphic file (type png)
+ <use img/U1.png>
+Package pdftex.def Info: img/U1.png used on input line 159.
+(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
+
+<img/U4.png, id=65, 1030.60031pt x 933.4875pt>
+File: img/U4.png Graphic file (type png)
+ <use img/U4.png>
+Package pdftex.def Info: img/U4.png used on input line 163.
+(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
+
+<img/bull3.png, id=66, 980.91469pt x 922.19531pt>
+File: img/bull3.png Graphic file (type png)
+ <use img/bull3.png>
+Package pdftex.def Info: img/bull3.png used on input line 171.
+(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
+
+<img/bull2.png, id=67, 980.91469pt x 922.19531pt>
+File: img/bull2.png Graphic file (type png)
+ <use img/bull2.png>
+Package pdftex.def Info: img/bull2.png used on input line 175.
+(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
+
+<img/bull1.png, id=68, 980.91469pt x 922.19531pt>
+File: img/bull1.png Graphic file (type png)
+ <use img/bull1.png>
+Package pdftex.def Info: img/bull1.png used on input line 179.
+(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
+
+<img/bull4.png, id=69, 980.91469pt x 922.19531pt>
+File: img/bull4.png Graphic file (type png)
+ <use img/bull4.png>
+Package pdftex.def Info: img/bull4.png used on input line 183.
+(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
+
+<img/bb3.png, id=70, 991.45406pt x 911.65594pt>
+File: img/bb3.png Graphic file (type png)
+ <use img/bb3.png>
+Package pdftex.def Info: img/bb3.png used on input line 191.
+(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
+
+<img/bb2.png, id=71, 991.45406pt x 911.65594pt>
+File: img/bb2.png Graphic file (type png)
+ <use img/bb2.png>
+Package pdftex.def Info: img/bb2.png used on input line 195.
+(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
+
+<img/bb1.png, id=72, 991.45406pt x 911.65594pt>
+File: img/bb1.png Graphic file (type png)
+ <use img/bb1.png>
+Package pdftex.def Info: img/bb1.png used on input line 199.
+(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
+
+<img/bb4.png, id=73, 991.45406pt x 911.65594pt>
+File: img/bb4.png Graphic file (type png)
+ <use img/bb4.png>
+Package pdftex.def Info: img/bb4.png used on input line 203.
+(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
+
+<img/woman3.png, id=74, 1043.39813pt x 908.64468pt>
+File: img/woman3.png Graphic file (type png)
+ <use img/woman3.png>
+Package pdftex.def Info: img/woman3.png used on input line 211.
+(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+
+<img/woman2.png, id=75, 1043.39813pt x 908.64468pt>
+File: img/woman2.png Graphic file (type png)
+ <use img/woman2.png>
+Package pdftex.def Info: img/woman2.png used on input line 215.
+(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+
+<img/woman1.png, id=76, 1043.39813pt x 908.64468pt>
+File: img/woman1.png Graphic file (type png)
+ <use img/woman1.png>
+Package pdftex.def Info: img/woman1.png used on input line 219.
+(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+
+<img/woman4.png, id=77, 1043.39813pt x 908.64468pt>
+File: img/woman4.png Graphic file (type png)
+ <use img/woman4.png>
+Package pdftex.def Info: img/woman4.png used on input line 223.
+(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+
+<img/TT3.png, id=78, 1011.78pt x 877.02657pt>
+File: img/TT3.png Graphic file (type png)
+ <use img/TT3.png>
+Package pdftex.def Info: img/TT3.png used on input line 231.
+(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+
+<img/TT2.png, id=79, 1011.78pt x 877.02657pt>
+File: img/TT2.png Graphic file (type png)
+ <use img/TT2.png>
+Package pdftex.def Info: img/TT2.png used on input line 235.
+(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+
+<img/TT1.png, id=80, 1011.78pt x 877.02657pt>
+File: img/TT1.png Graphic file (type png)
+ <use img/TT1.png>
+Package pdftex.def Info: img/TT1.png used on input line 239.
+(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+
+<img/TT4.png, id=81, 1011.78pt x 877.02657pt>
+File: img/TT4.png Graphic file (type png)
+ <use img/TT4.png>
+Package pdftex.def Info: img/TT4.png used on input line 243.
+(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+
+<img/Y3.png, id=82, 946.28531pt x 891.33pt>
+File: img/Y3.png Graphic file (type png)
+ <use img/Y3.png>
+Package pdftex.def Info: img/Y3.png used on input line 251.
+(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
+
+<img/Y2.png, id=83, 946.28531pt x 891.33pt>
+File: img/Y2.png Graphic file (type png)
+ <use img/Y2.png>
+Package pdftex.def Info: img/Y2.png used on input line 255.
+(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
+
+<img/Y1.png, id=84, 946.28531pt x 891.33pt>
+File: img/Y1.png Graphic file (type png)
+ <use img/Y1.png>
+Package pdftex.def Info: img/Y1.png used on input line 259.
+(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
+
+<img/Y4.png, id=85, 946.28531pt x 891.33pt>
+File: img/Y4.png Graphic file (type png)
+ <use img/Y4.png>
+Package pdftex.def Info: img/Y4.png used on input line 263.
+(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
+
+<img/sd3.png, id=86, 1089.31969pt x 892.83563pt>
+File: img/sd3.png Graphic file (type png)
+ <use img/sd3.png>
+Package pdftex.def Info: img/sd3.png used on input line 271.
+(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
+
+<img/sd2.png, id=87, 1089.31969pt x 892.83563pt>
+File: img/sd2.png Graphic file (type png)
+ <use img/sd2.png>
+Package pdftex.def Info: img/sd2.png used on input line 275.
+(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
+
+<img/sd1.png, id=88, 1089.31969pt x 892.83563pt>
+File: img/sd1.png Graphic file (type png)
+ <use img/sd1.png>
+Package pdftex.def Info: img/sd1.png used on input line 279.
+(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
+
+<img/sd4.png, id=89, 1089.31969pt x 892.83563pt>
+File: img/sd4.png Graphic file (type png)
+ <use img/sd4.png>
+Package pdftex.def Info: img/sd4.png used on input line 283.
+(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
+
+<img/spoon3.png, id=90, 1086.30844pt x 913.16156pt>
+File: img/spoon3.png Graphic file (type png)
+ <use img/spoon3.png>
+Package pdftex.def Info: img/spoon3.png used on input line 291.
+(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
+
+<img/spoon2.png, id=91, 1086.30844pt x 913.16156pt>
+File: img/spoon2.png Graphic file (type png)
+ <use img/spoon2.png>
+Package pdftex.def Info: img/spoon2.png used on input line 295.
+(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
+
+<img/spoon1.png, id=92, 1086.30844pt x 913.16156pt>
+File: img/spoon1.png Graphic file (type png)
+ <use img/spoon1.png>
+Package pdftex.def Info: img/spoon1.png used on input line 299.
+(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
+
+<img/spoon4.png, id=93, 1086.30844pt x 913.16156pt>
+File: img/spoon4.png Graphic file (type png)
+ <use img/spoon4.png>
+Package pdftex.def Info: img/spoon4.png used on input line 303.
+(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
+
+<img/teeth3.png, id=94, 1108.8928pt x 917.67844pt>
+File: img/teeth3.png Graphic file (type png)
+ <use img/teeth3.png>
+Package pdftex.def Info: img/teeth3.png used on input line 311.
+(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
+
+<img/teeth2.png, id=95, 1108.8928pt x 917.67844pt>
+File: img/teeth2.png Graphic file (type png)
+ <use img/teeth2.png>
+Package pdftex.def Info: img/teeth2.png used on input line 315.
+(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
+
+<img/teeth1.png, id=96, 1108.8928pt x 917.67844pt>
+File: img/teeth1.png Graphic file (type png)
+ <use img/teeth1.png>
+Package pdftex.def Info: img/teeth1.png used on input line 319.
+(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
+
+<img/teeth4.png, id=97, 1108.8928pt x 917.67844pt>
+File: img/teeth4.png Graphic file (type png)
+ <use img/teeth4.png>
+Package pdftex.def Info: img/teeth4.png used on input line 323.
+(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
+
+<img/T1.png, id=98, 1077.27469pt x 933.4875pt>
+File: img/T1.png Graphic file (type png)
+ <use img/T1.png>
+Package pdftex.def Info: img/T1.png used on input line 331.
+(pdftex.def)             Requested size: 197.29623pt x 170.95473pt.
+
+<img/T2.png, id=99, 1077.27469pt x 933.4875pt>
+File: img/T2.png Graphic file (type png)
+ <use img/T2.png>
+Package pdftex.def Info: img/T2.png used on input line 335.
+(pdftex.def)             Requested size: 197.29623pt x 170.95473pt.
+
+<img/ellipsoid1_bug.png, id=100, 1205.2528pt x 933.4875pt>
+File: img/ellipsoid1_bug.png Graphic file (type png)
+
+<use img/ellipsoid1_bug.png>
+Package pdftex.def Info: img/ellipsoid1_bug.png used on input line 340.
+(pdftex.def)             Requested size: 375.80542pt x 291.07315pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
+ [2 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/cube3.png> <C:/Users/w
+66_000/Documents/GitHub/cshape/report/img/cube2.png> <C:/Users/w66_000/Document
+s/GitHub/cshape/report/img/cube1.png> <C:/Users/w66_000/Documents/GitHub/cshape
+/report/img/cube4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ell
+ipsoid3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ellipsoid2.pn
+g> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ellipsoid1.png> <C:/Use
+rs/w66_000/Documents/GitHub/cshape/report/img/ellipsoid4.png> <C:/Users/w66_000
+/Documents/GitHub/cshape/report/img/bunny3.png> <C:/Users/w66_000/Documents/Git
+Hub/cshape/report/img/bunny2.png> <C:/Users/w66_000/Documents/GitHub/cshape/rep
+ort/img/bunny1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bunny4
+.png>] [3 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/U3.png> <C:/User
+s/w66_000/Documents/GitHub/cshape/report/img/U2.png> <C:/Users/w66_000/Document
+s/GitHub/cshape/report/img/U1.png> <C:/Users/w66_000/Documents/GitHub/cshape/re
+port/img/U4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bull3.png
+> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bull2.png> <C:/Users/w66
+_000/Documents/GitHub/cshape/report/img/bull1.png> <C:/Users/w66_000/Documents/
+GitHub/cshape/report/img/bull4.png> <C:/Users/w66_000/Documents/GitHub/cshape/r
+eport/img/bb3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bb2.png
+> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bb1.png> <C:/Users/w66_0
+00/Documents/GitHub/cshape/report/img/bb4.png> <C:/Users/w66_000/Documents/GitH
+ub/cshape/report/img/woman3.png> <C:/Users/w66_000/Documents/GitHub/cshape/repo
+rt/img/woman2.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/woman1.
+png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/woman4.png>] [4 <C:/U
+sers/w66_000/Documents/GitHub/cshape/report/img/TT3.png> <C:/Users/w66_000/Docu
+ments/GitHub/cshape/report/img/TT2.png> <C:/Users/w66_000/Documents/GitHub/csha
+pe/report/img/TT1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/TT4
+.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/Y3.png> <C:/Users/w6
+6_000/Documents/GitHub/cshape/report/img/Y2.png> <C:/Users/w66_000/Documents/Gi
+tHub/cshape/report/img/Y1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report
+/img/Y4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/sd3.png> <C:/
+Users/w66_000/Documents/GitHub/cshape/report/img/sd2.png> <C:/Users/w66_000/Doc
+uments/GitHub/cshape/report/img/sd1.png> <C:/Users/w66_000/Documents/GitHub/csh
+ape/report/img/sd4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/sp
+oon3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/spoon2.png> <C:/
+Users/w66_000/Documents/GitHub/cshape/report/img/spoon1.png> <C:/Users/w66_000/
+Documents/GitHub/cshape/report/img/spoon4.png>]
+[5 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/teeth3.png> <C:/Users/w
+66_000/Documents/GitHub/cshape/report/img/teeth2.png> <C:/Users/w66_000/Documen
+ts/GitHub/cshape/report/img/teeth1.png> <C:/Users/w66_000/Documents/GitHub/csha
+pe/report/img/teeth4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/
+T1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/T2.png>] [6 <C:/Us
+ers/w66_000/Documents/GitHub/cshape/report/img/ellipsoid1_bug.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
+
+(C:\Users\w66_000\Documents\GitHub\cshape\report\report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 5198CA8EDD73F535FDA1195F110B94E8;282.
+Package rerunfilecheck Info: File `report.brf' has not changed.
+(rerunfilecheck)             Checksum: A4F7E1FDF58BF484BD98F98BBCC04FA3;35.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+ ) 
+Here is how much of TeX's memory you used:
+ 7121 strings out of 493921
+ 102554 string characters out of 3144870
+ 197148 words of memory out of 3000000
+ 10194 multiletter control sequences out of 15000+200000
+ 11390 words of font info for 44 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 32i,7n,29p,471b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (6 pages, 3074008 bytes).
+PDF statistics:
+ 279 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+

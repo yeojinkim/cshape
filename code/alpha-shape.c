@@ -32,12 +32,9 @@ void AlphaShape( unsigned int alpha )
 	facetT *facet = NULL;
 	vertexT *vertex = NULL;
 	vertexT **vertexp = NULL;
-	tFace faceTetra = NULL;
-	tVertex vertexTetra = NULL;
-	int signVolTetra = -1;
 	double radius=0.0;
 	double* center = NULL;
-	NEW(faceTetra, tsFace);
+	double volume = 0.0;
 
 	//
 	// create points in 4D (x,y,z,x^2+y^2+z^2)
@@ -93,27 +90,24 @@ void AlphaShape( unsigned int alpha )
 		//if the normal vector of tetrahedron points downward(=lower convex hull)
 		if (facet->normal[3] < 0)
 		{
-			//Compute Radius
-			center = qh_facetcenter(facet->vertices);
-			radius = qh_pointdist(center, tetra->vertex[0]->v, 3);
-
-			//If radius is bigger than alpha, remove tetra. 
-			if (radius*radius > alpha)
-			{
-				DELETE(tetras, tetra);
-				continue;
-			}
-			//Compute the sign volume of tetrahedron
-			faceTetra->vertex[0] = tetra->vertex[0];
-			faceTetra->vertex[1] = tetra->vertex[1];
-			faceTetra->vertex[2] = tetra->vertex[2];
-			vertexTetra = tetra->vertex[3];
-			signVolTetra = VolumeSign(faceTetra, vertexTetra);
+			//Compute the volume of tetrahedron
+			volume = qh_facetarea(facet);
 
 			//if the volume is not zero, 
 			//generate faces. (I didn't care about duplications of faces)
-			if (signVolTetra != 0)
+			if (volume > 0.5)
 			{
+				//Compute Radius
+				center = qh_facetcenter(facet->vertices);
+				radius = qh_pointdist(center, tetra->vertex[0]->v, 3);
+
+				//If radius is bigger than alpha, remove tetra. 
+				if (SQR(radius) > alpha)
+				{
+					DELETE(tetras, tetra);
+					continue;
+				}
+
 				MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
 				MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
 				MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
@@ -124,10 +118,8 @@ void AlphaShape( unsigned int alpha )
 
 	free(pt);
 	free(all_v);
-	free(faceTetra);
 	pt = NULL;
 	all_v = NULL;
-	faceTetra = NULL;
 	qh_freeqhull(!qh_ALL);
 	qh_memfreeshort(&curlong, &totlong);
 }
