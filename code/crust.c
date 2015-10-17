@@ -23,28 +23,16 @@ void	Crust( void )
 	int vsize = 0;
 	int id = 0;
 
-	static char* options = (char*)"delaunay C-4 QJ Pp";
+	//static char* options = (char*)"delaunay QJ Pp";
+	static char* options = (char*)"voronoi QJ Pp";
 	coordT *pt = NULL;
 	int curlong, totlong;
-	tTetra tetra;
-	int vid = 0;
 	facetT *facet = NULL;
 	vertexT *vertex = NULL;
 	vertexT **vertexp = NULL;
-	tFace faceTetra = NULL;
-	tVertex vertexTetra = NULL;
-	int signVolTetra = -1;
-	coordT* center = NULL;
-	double radius = 0.0;
-	tVertex pole;
-	tVertex antipole;
-
-	NEW(faceTetra, tsFace);
-
-	//
-	// create points in 4D (x,y,z,x^2+y^2+z^2)
-	//
-
+	tList voronoiVertex = NULL;
+	tVertex center = NULL;
+	
 	//Count the number of points
 	ptr_v = vertices;
 	do {
@@ -57,7 +45,7 @@ void	Crust( void )
 	all_v = (tVertex*)calloc(vsize, sizeof(tVertex));
 	assert(pt && all_v);
 
-	//Copy points and compute 4th element
+	//Copy points 
 	ptr_v = vertices;
 	do {
 		pt[id++] = ptr_v->v[0];
@@ -69,7 +57,7 @@ void	Crust( void )
 	} while (ptr_v != vertices);
 
 	//
-	// compute convex hull in 4D by calling qhull
+	// compute convex hull in 3D by calling qhull
 	//
 
 	qh_init_A(stdin, stdout, stderr, 0, NULL);
@@ -78,56 +66,51 @@ void	Crust( void )
 	qh_qhull();
 	qh_check_output();
 
+	qh_setvoronoi_all();
+
 	//loop through all faces
 	FORALLfacets
 	{
-		tetra = MakeNullTetra();
-
-		//get vertices of facet
+		//get the vertex of voronoi diagram
 		//loop through each vertex
-		vid = 0;
 		FOREACHvertex_(facet->vertices)
 		{
-			//get the id of the vertex (4 points)
-			tetra->vertex[vid++] = all_v[qh_pointid(vertex->point)];
-		}
-
-		//Compute the sign volume of tetrahedron
-		faceTetra->vertex[0] = tetra->vertex[0];
-		faceTetra->vertex[1] = tetra->vertex[1];
-		faceTetra->vertex[2] = tetra->vertex[2];
-		vertexTetra = tetra->vertex[3];
-		signVolTetra = VolumeSign(faceTetra, vertexTetra);
+			//copy the center of delaunay triangle
+			NEW(center, tsVertex);
+			center->v[0] = facet->center[0]; 
+			center->v[1] = facet->center[1];
+			center->v[2] = facet->center[2];
+			center->next = center->prev = NULL;
+			center->ispole = false;
+			center->vvlist = NULL;
 		
+			//the vertex of vornoi diagram
+			NEW(voronoiVertex, tsList);		//한 변수에 여러번 할당 괜찮은지???
+			voronoiVertex->p = (void*)center;
+			voronoiVertex->next = voronoiVertex->prev = NULL;
 
-		//1. Making new datastructure for vornoi?
-		//2. Or just simply search the points through tetrahedron ( This takes 4n time )?
-		//3. Or use voronoi functions given in qhull?
-		//Find a pole
-
-		//Find an antipole
-
-
-		//if the normal vector of tetrahedron points downward(=lower convex hull) and the volume is not zero, 
-		//generate faces. (I didn't care about duplications of faces)
-		if (facet->normal[3] < 0 && signVolTetra != 0)
-		{
-			MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
-			MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
-			MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
-			MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
+			ADD(all_v[qh_pointid(vertex->point)]->vvlist, voronoiVertex);	// the center of delanauy triangle = the vertex of voronoi diagram 
 		}
 	}
 
+	//Compute Pole
+
+
+
 	free(pt);
 	free(all_v);
-	free(faceTetra);
-	pt = NULL;
 	all_v = NULL;
-	faceTetra = NULL;
+	voronoiVertex = NULL;
 	qh_freeqhull(!qh_ALL);
 	qh_memfreeshort(&curlong, &totlong);
 }
 
+//Find a pole
+
+//Find an antipole
+
+
+//if the normal vector of tetrahedron points downward(=lower convex hull) and the volume is not zero, 
+//generate faces. (I didn't care about duplications of faces)
 
 

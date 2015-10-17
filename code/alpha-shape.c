@@ -90,32 +90,35 @@ void AlphaShape( unsigned int alpha )
 			tetra->vertex[vid++] = all_v[qh_pointid(vertex->point)];
 		}
 		
-		//Compute Radius
-		center = qh_getcenter(facet->vertices);
-		radius = qh_pointdist(center, tetra->vertex[0], 4);
-
-		//If radius is bigger than alpha, remove tetra. 
-		if (radius*radius > alpha)
+		//if the normal vector of tetrahedron points downward(=lower convex hull)
+		if (facet->normal[3] < 0)
 		{
-			DELETE(tetras, tetra);
-			continue;
-		}
+			//Compute Radius
+			center = qh_facetcenter(facet->vertices);
+			radius = qh_pointdist(center, tetra->vertex[0]->v, 3);
 
-		//Compute the sign volume of tetrahedron
-		faceTetra->vertex[0] = tetra->vertex[0];
-		faceTetra->vertex[1] = tetra->vertex[1];
-		faceTetra->vertex[2] = tetra->vertex[2];
-		vertexTetra = tetra->vertex[3];
-		signVolTetra = VolumeSign(faceTetra, vertexTetra);
+			//If radius is bigger than alpha, remove tetra. 
+			if (radius*radius > alpha)
+			{
+				DELETE(tetras, tetra);
+				continue;
+			}
+			//Compute the sign volume of tetrahedron
+			faceTetra->vertex[0] = tetra->vertex[0];
+			faceTetra->vertex[1] = tetra->vertex[1];
+			faceTetra->vertex[2] = tetra->vertex[2];
+			vertexTetra = tetra->vertex[3];
+			signVolTetra = VolumeSign(faceTetra, vertexTetra);
 
-		//if the normal vector of tetrahedron points downward(=lower convex hull) and the volume is not zero, 
-		//generate faces. (I didn't care about duplications of faces)
-		if (facet->normal[3] < 0 && signVolTetra != 0)
-		{
-			MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
-			MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
-			MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
-			MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
+			//if the volume is not zero, 
+			//generate faces. (I didn't care about duplications of faces)
+			if (signVolTetra != 0)
+			{
+				MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
+				MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
+				MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
+				MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
+			}
 		}
 	}
 
