@@ -1,4 +1,5 @@
 #include "crust.h"
+#include "delauany.h"
 #include "shape.h"
 
 /*-------------------------------------------------------------------*/
@@ -71,6 +72,19 @@ bool HasVertex(tVertex vertex)
 	return false;
 }
 
+bool isBoundedVornoicell(tList voronoiVertices)
+{
+	int num = 0;
+	tList ptr_vorvs = voronoiVertices;
+
+	do{
+		num++;
+		ptr_vorvs = ptr_vorvs->next;
+	} while (ptr_vorvs != voronoiVertices);
+
+	if (num < 4) return false;
+	return true;
+}
 void FindPoleAntipole(int vsize)
 {
 	tVertex ptr_v;
@@ -81,47 +95,65 @@ void FindPoleAntipole(int vsize)
 	double minDistance = 1e+16;
 	tVertex pole = NULL;
 	tVertex antipole = NULL;
+	tVertex normal = NULL;
+
+	NEW(normal, tsVertex);
 
 	int i = 0;
 
 	//compute a pole and an antipole
 	ptr_v = vertices;
 	do {
-		//find a pole
-		ptr_vorv = ptr_v->vvlist;
 
+		ptr_vorv = ptr_v->vvlist;
 		//if there is no voronoi verticies, it means this point is added pole/antipole.
 		if (ptr_vorv == NULL) break;
-		
-		do{
-			//Compute the distance between a voronoi cite and a voronoi vertex
-			vorv = (tVertex)(ptr_vorv->p);
-			vorDistance = qh_pointdist(vorv->v, ptr_v->v, 3);
 
-			//If current voronoi vertex is farther than other candidates, store it as current and best candidates for pole
-			if (vorDistance > maxDistance)
+		//count the number of vornoi vertices. if voronoi verticies < 4, it is unbounded cell
+		if (isBoundedVornoicell(ptr_vorv))
+		{
+			//if voronoi cell is bounded, find a pole and a normal
+			do{
+				//Compute the distance between a voronoi cite and a voronoi vertex
+				vorv = (tVertex)(ptr_vorv->p);
+				vorDistance = qh_pointdist(vorv->v, ptr_v->v, 3);
+
+				//If current voronoi vertex is farther than other candidates, store it as current and best candidates for pole
+				if (vorDistance > maxDistance)
+				{
+					pole = vorv;
+					maxDistance = vorDistance;
+				}
+
+				ptr_vorv = ptr_vorv->next;
+
+			} while (ptr_vorv != ptr_v->vvlist);
+			if (pole != NULL)
 			{
-				//Erase the last pole vertex
-				if (pole != NULL) pole->ispole = false;
-
-				//Save the new pole vertex
-				vorv->ispole = true;
-				pole = vorv;
-				maxDistance = vorDistance;
+				pole->ispole = true;
+				//compute normal  vector sp (s:voronoi cite, p:pole)
+				normal->v[0] = pole->v[0] - ptr_v->v[0];
+				normal->v[1] = pole->v[1] - ptr_v->v[1];
+				normal->v[2] = pole->v[2] - ptr_v->v[2];
 			}
+		}
+		else
+		{
+			//if voronoi cell is unbounded, find a normal 
+			
 
-			ptr_vorv = ptr_vorv->next;
-
-		} while (ptr_vorv != ptr_v->vvlist);
-
+			//----- adjacent triangles + if there is any variable for bounded/unbounded?
+		}
+		
 		//find a antipole
 		ptr_vorv = ptr_v->vvlist;
 		do{
 			vorv = (tVertex)(ptr_vorv->p);
+			
 			if (!(vorv->ispole))
 			{
-				vorDistance = vorv->v[0] * pole->v[0] + vorv->v[1] * pole->v[1] + vorv->v[2] * pole->v[2];
-				printf("antipole distance: %lf\n", vorDistance);
+				//inner product between 
+				vorDistance = (vorv->v[0] - ptr_v->v[0]) * (pole->v[0] - ptr_v->v[0]) + (vorv->v[1] - ptr_v->v[1]) * (pole->v[1] - ptr_v->v[1]) + (vorv->v[2] - ptr_v->v[2]) * (pole->v[2] - ptr_v->v[2]);
 				if (vorDistance < minDistance)
 				{
 					antipole = vorv;
@@ -132,27 +164,28 @@ void FindPoleAntipole(int vsize)
 
 		} while (ptr_vorv != ptr_v->vvlist);
 		
+		if (antipole != NULL) antipole->ispole = true;
+		
 		//add a pole and an antipole to point set
 		if (pole != NULL && !HasVertex(pole))
 		{
 			pole->vnum = vsize + i; i++;
 			ADD(vertices, pole);
-			printf("ADD POLE : %lf %lf %lf\n", pole->v[0], pole->v[1], pole->v[2]);
 		}
 		if (antipole != NULL && !HasVertex(antipole))
 		{
 			antipole->vnum = vsize + i; i++;
 			ADD(vertices, antipole);
-			printf("ADD ANTIPOLE : %lf %lf %lf\n\n", antipole->v[0], antipole->v[1], antipole->v[2]);
+			
 		}
-
+	
 		pole = NULL;
 		antipole = NULL;
 		maxDistance = 0.0;
-		//minDistance = 1e+16;
+		minDistance = 1e+16;
 		ptr_v = ptr_v->next;
 	} while (ptr_v != vertices);
-
+	free(normal);
 }
 
 void	Crust( void )
@@ -163,7 +196,7 @@ void	Crust( void )
 	int id = 0;
 
 	//static char* options = (char*)"delaunay QJ Pp";
-	static char* options = (char*)"voronoi v FA QJ Pp";
+	static char* options = (char*)"voronoi v n FA QJ Pp";
 	coordT *pt = NULL;
 	int curlong, totlong;
 	facetT *facet = NULL;
@@ -173,6 +206,10 @@ void	Crust( void )
 
 	tVertex center = NULL;
 	tList voronoiVertex = NULL;
+
+	tTetra testt = NULL;
+	tEdge teste = NULL;
+	tFace testf = NULL;
 	
 	//Count the number of points
 	ptr_v = vertices;
@@ -181,7 +218,6 @@ void	Crust( void )
 		ptr_v = ptr_v->next;
 	} while (ptr_v != vertices);
 
-	printf("vsize:%d\n", vsize);
 	//Allocate memory
 	pt = (coordT*)calloc(vsize * 4, sizeof(coordT));
 	all_v = (tVertex*)calloc(vsize, sizeof(tVertex));
@@ -245,20 +281,13 @@ void	Crust( void )
 	
 	//compute delaunay triangulation of new points set
 	//report faces of tetrahedron which ahve end points from only original point set
-
+	Delaunay();
+	
 	free(pt);
 	free(all_v);
 	all_v = NULL;
 	qh_freeqhull(!qh_ALL);
 	qh_memfreeshort(&curlong, &totlong);
+	
 }
-
-//Find a pole
-
-//Find an antipole
-
-
-//if the normal vector of tetrahedron points downward(=lower convex hull) and the volume is not zero, 
-//generate faces. (I didn't care about duplications of faces)
-
 

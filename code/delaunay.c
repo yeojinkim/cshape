@@ -47,8 +47,6 @@ void Delaunay(void)
 		vsize++;
 		ptr_v = ptr_v->next;
 	} while (ptr_v != vertices);
-
-	printf("vsize:%d\n", vsize);
 	//Allocate memory
 	pt = (coordT*)calloc(vsize * 4, sizeof(coordT));
 	all_v = (tVertex*)calloc(vsize, sizeof(tVertex));
@@ -100,10 +98,10 @@ void Delaunay(void)
 		//generate faces. (I didn't care about duplications of faces)
 		if (facet->normal[3] < 0 && signVolTetra != 0 )	
 		{
-			MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
-			MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
-			MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
-			MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
+			if (!(tetra->vertex[0]->ispole) && !(tetra->vertex[1]->ispole) && !(tetra->vertex[2]->ispole)) MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
+			if (!(tetra->vertex[1]->ispole) && !(tetra->vertex[2]->ispole) && !(tetra->vertex[3]->ispole)) MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
+			if (!(tetra->vertex[2]->ispole) && !(tetra->vertex[3]->ispole) && !(tetra->vertex[0]->ispole)) MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
+			if (!(tetra->vertex[3]->ispole) && !(tetra->vertex[0]->ispole) && !(tetra->vertex[1]->ispole)) MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
 		}
 	}
 

@@ -171,11 +171,10 @@ void DrawVertices(tVertex vlist)
    v = vlist;
    
    if(vlist==NULL) return;
-
    glBegin(GL_POINTS);
-   do {                                 
+   do {      
 	  glVertex3dv(v->v);
-      v = v->next;
+	  v = v->next;
    } while ( v != vlist );
    glEnd();
 }
