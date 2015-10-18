@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.20)  14 OCT 2015 19:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.20)  18 OCT 2015 16:48
 entering extended mode
 **report.tex
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.tex
+(C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -325,7 +325,7 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 )
 \c@theorem=\count117
 
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.aux)
+(C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
@@ -378,8 +378,8 @@ LaTeX Info: Redefining \ref on input line 57.
 LaTeX Info: Redefining \pageref on input line 57.
 LaTeX Info: Redefining \nameref on input line 57.
 
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.out)
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.out)
+(C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.out)
+(C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.out)
 \@outlinefile=\write4
 LaTeX Font Info:    Try loading font information for U+lasy on input line 66.
 
@@ -396,385 +396,288 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: Citation `Qhull' on page 1 undefined on input line 67.
+
+
 Overfull \hbox (37.65472pt too wide) in paragraph at lines 69--70
 []| \OT1/cmr/m/n/10.95 - Save the ver-tices of a facets as the ver-tices of tet
 ra-he-dron. This ver-tices are 3 coordinates$[]$. 
  []
 
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.bbl
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.brf)
+(C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.bbl
+(C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.brf)
 \tf@brf=\write5
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
-<img/cube3.png, id=49, 931.22906pt x 933.4875pt>
-File: img/cube3.png Graphic file (type png)
- <use img/cube3.png>
-Package pdftex.def Info: img/cube3.png used on input line 91.
-(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
-
-<img/cube2.png, id=51, 931.22906pt x 933.4875pt>
-File: img/cube2.png Graphic file (type png)
- <use img/cube2.png>
-Package pdftex.def Info: img/cube2.png used on input line 95.
-(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
-
-<img/cube1.png, id=52, 931.22906pt x 933.4875pt>
+<img/cube1.png, id=46, 889.82437pt x 901.86937pt>
 File: img/cube1.png Graphic file (type png)
  <use img/cube1.png>
-Package pdftex.def Info: img/cube1.png used on input line 99.
-(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
+Package pdftex.def Info: img/cube1.png used on input line 127.
+(pdftex.def)             Requested size: 197.29623pt x 199.9669pt.
 
-<img/cube4.png, id=53, 931.22906pt x 933.4875pt>
-File: img/cube4.png Graphic file (type png)
- <use img/cube4.png>
-Package pdftex.def Info: img/cube4.png used on input line 103.
-(pdftex.def)             Requested size: 103.34666pt x 103.59555pt.
+<img/cube2.png, id=47, 888.31876pt x 904.1278pt>
+File: img/cube2.png Graphic file (type png)
+ <use img/cube2.png>
+Package pdftex.def Info: img/cube2.png used on input line 131.
+(pdftex.def)             Requested size: 197.29623pt x 200.79877pt.
 
-<img/ellipsoid3.png, id=54, 1205.2528pt x 933.4875pt>
-File: img/ellipsoid3.png Graphic file (type png)
- <use img/ellipsoid3.png>
-Package pdftex.def Info: img/ellipsoid3.png used on input line 111.
-(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
-
-<img/ellipsoid2.png, id=55, 1205.2528pt x 933.4875pt>
-File: img/ellipsoid2.png Graphic file (type png)
- <use img/ellipsoid2.png>
-Package pdftex.def Info: img/ellipsoid2.png used on input line 115.
-(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
-
-<img/ellipsoid1.png, id=56, 1205.2528pt x 933.4875pt>
+<img/ellipsoid1.png, id=48, 1236.62pt x 1203.49625pt>
 File: img/ellipsoid1.png Graphic file (type png)
  <use img/ellipsoid1.png>
-Package pdftex.def Info: img/ellipsoid1.png used on input line 119.
-(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
+Package pdftex.def Info: img/ellipsoid1.png used on input line 139.
+(pdftex.def)             Requested size: 150.32503pt x 146.28642pt.
 
-<img/ellipsoid4.png, id=57, 1205.2528pt x 933.4875pt>
-File: img/ellipsoid4.png Graphic file (type png)
- <use img/ellipsoid4.png>
-Package pdftex.def Info: img/ellipsoid4.png used on input line 123.
-(pdftex.def)             Requested size: 103.34666pt x 80.03621pt.
+<img/ellipsoid2.png, id=50, 1250.6725pt x 1209.51875pt>
+File: img/ellipsoid2.png Graphic file (type png)
 
-<img/bunny3.png, id=58, 1042.64531pt x 933.4875pt>
-File: img/bunny3.png Graphic file (type png)
- <use img/bunny3.png>
-Package pdftex.def Info: img/bunny3.png used on input line 131.
-(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
+<use img/ellipsoid2.png>
+Package pdftex.def Info: img/ellipsoid2.png used on input line 143.
+(pdftex.def)             Requested size: 150.32503pt x 145.37592pt.
+ <img/ellipsoid3.png, id=51, 1236.62pt x 1199.48125pt>
+File: img/ellipsoid3.png Graphic file (type png)
 
-<img/bunny2.png, id=59, 1042.64531pt x 933.4875pt>
-File: img/bunny2.png Graphic file (type png)
- <use img/bunny2.png>
-Package pdftex.def Info: img/bunny2.png used on input line 135.
-(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
-
-<img/bunny1.png, id=60, 1042.64531pt x 933.4875pt>
+<use img/ellipsoid3.png>
+Package pdftex.def Info: img/ellipsoid3.png used on input line 147.
+(pdftex.def)             Requested size: 150.32503pt x 145.7984pt.
+ <img/bunny1.png, id=52, 913.91437pt x 901.11656pt>
 File: img/bunny1.png Graphic file (type png)
- <use img/bunny1.png>
-Package pdftex.def Info: img/bunny1.png used on input line 139.
-(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
 
-<img/bunny4.png, id=61, 1042.64531pt x 933.4875pt>
-File: img/bunny4.png Graphic file (type png)
- <use img/bunny4.png>
-Package pdftex.def Info: img/bunny4.png used on input line 143.
-(pdftex.def)             Requested size: 103.34666pt x 92.51382pt.
+<use img/bunny1.png>
+Package pdftex.def Info: img/bunny1.png used on input line 155.
+(pdftex.def)             Requested size: 150.32503pt x 148.21031pt.
+ <img/bunny2.png, id=53, 913.91437pt x 903.375pt>
+File: img/bunny2.png Graphic file (type png)
 
-<img/U3.png, id=62, 1030.60031pt x 933.4875pt>
-File: img/U3.png Graphic file (type png)
- <use img/U3.png>
-Package pdftex.def Info: img/U3.png used on input line 151.
-(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
+<use img/bunny2.png>
+Package pdftex.def Info: img/bunny2.png used on input line 159.
+(pdftex.def)             Requested size: 150.32503pt x 148.58177pt.
+ <img/bunny3.png, id=54, 913.91437pt x 901.86937pt>
+File: img/bunny3.png Graphic file (type png)
 
-<img/U2.png, id=63, 1030.60031pt x 933.4875pt>
-File: img/U2.png Graphic file (type png)
- <use img/U2.png>
-Package pdftex.def Info: img/U2.png used on input line 155.
-(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
-
-<img/U1.png, id=64, 1030.60031pt x 933.4875pt>
+<use img/bunny3.png>
+Package pdftex.def Info: img/bunny3.png used on input line 163.
+(pdftex.def)             Requested size: 150.32503pt x 148.33414pt.
+ <img/U1.png, id=55, 948.54375pt x 902.6222pt>
 File: img/U1.png Graphic file (type png)
- <use img/U1.png>
-Package pdftex.def Info: img/U1.png used on input line 159.
-(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
 
-<img/U4.png, id=65, 1030.60031pt x 933.4875pt>
-File: img/U4.png Graphic file (type png)
- <use img/U4.png>
-Package pdftex.def Info: img/U4.png used on input line 163.
-(pdftex.def)             Requested size: 103.34666pt x 93.59636pt.
+<use img/U1.png>
+Package pdftex.def Info: img/U1.png used on input line 171.
+(pdftex.def)             Requested size: 150.32503pt x 143.04521pt.
+ <img/U2.png, id=56, 952.30782pt x 900.36375pt>
+File: img/U2.png Graphic file (type png)
 
-<img/bull3.png, id=66, 980.91469pt x 922.19531pt>
-File: img/bull3.png Graphic file (type png)
- <use img/bull3.png>
-Package pdftex.def Info: img/bull3.png used on input line 171.
-(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
+<use img/U2.png>
+Package pdftex.def Info: img/U2.png used on input line 175.
+(pdftex.def)             Requested size: 150.32503pt x 142.12402pt.
+ <img/U3.png, id=57, 964.35281pt x 904.88063pt>
+File: img/U3.png Graphic file (type png)
 
-<img/bull2.png, id=67, 980.91469pt x 922.19531pt>
-File: img/bull2.png Graphic file (type png)
- <use img/bull2.png>
-Package pdftex.def Info: img/bull2.png used on input line 175.
-(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
-
-<img/bull1.png, id=68, 980.91469pt x 922.19531pt>
+<use img/U3.png>
+Package pdftex.def Info: img/U3.png used on input line 179.
+(pdftex.def)             Requested size: 150.32503pt x 141.04207pt.
+ <img/bull1.png, id=58, 918.43124pt x 904.88063pt>
 File: img/bull1.png Graphic file (type png)
- <use img/bull1.png>
-Package pdftex.def Info: img/bull1.png used on input line 179.
-(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
 
-<img/bull4.png, id=69, 980.91469pt x 922.19531pt>
-File: img/bull4.png Graphic file (type png)
- <use img/bull4.png>
-Package pdftex.def Info: img/bull4.png used on input line 183.
-(pdftex.def)             Requested size: 103.34666pt x 97.14996pt.
+<use img/bull1.png>
+Package pdftex.def Info: img/bull1.png used on input line 187.
+(pdftex.def)             Requested size: 150.32503pt x 148.09763pt.
+ <img/bull2.png, id=59, 925.95938pt x 901.86937pt>
+File: img/bull2.png Graphic file (type png)
 
-<img/bb3.png, id=70, 991.45406pt x 911.65594pt>
-File: img/bb3.png Graphic file (type png)
- <use img/bb3.png>
-Package pdftex.def Info: img/bb3.png used on input line 191.
-(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
+<use img/bull2.png>
+Package pdftex.def Info: img/bull2.png used on input line 191.
+(pdftex.def)             Requested size: 150.32503pt x 146.40753pt.
+ <img/bull3.png, id=60, 916.92563pt x 905.63344pt>
+File: img/bull3.png Graphic file (type png)
 
-<img/bb2.png, id=71, 991.45406pt x 911.65594pt>
-File: img/bb2.png Graphic file (type png)
- <use img/bb2.png>
-Package pdftex.def Info: img/bb2.png used on input line 195.
-(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
-
-<img/bb1.png, id=72, 991.45406pt x 911.65594pt>
+<use img/bull3.png>
+Package pdftex.def Info: img/bull3.png used on input line 195.
+(pdftex.def)             Requested size: 150.32503pt x 148.46956pt.
+ <img/bb1.png, id=61, 1254.6875pt x 1207.51125pt>
 File: img/bb1.png Graphic file (type png)
- <use img/bb1.png>
-Package pdftex.def Info: img/bb1.png used on input line 199.
-(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
 
-<img/bb4.png, id=73, 991.45406pt x 911.65594pt>
-File: img/bb4.png Graphic file (type png)
- <use img/bb4.png>
-Package pdftex.def Info: img/bb4.png used on input line 203.
-(pdftex.def)             Requested size: 103.34666pt x 95.0242pt.
+<use img/bb1.png>
+Package pdftex.def Info: img/bb1.png used on input line 203.
+(pdftex.def)             Requested size: 150.32503pt x 144.674pt.
+ <img/bb2.png, id=62, 941.01563pt x 901.86937pt>
+File: img/bb2.png Graphic file (type png)
 
-<img/woman3.png, id=74, 1043.39813pt x 908.64468pt>
-File: img/woman3.png Graphic file (type png)
- <use img/woman3.png>
-Package pdftex.def Info: img/woman3.png used on input line 211.
-(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+<use img/bb2.png>
+Package pdftex.def Info: img/bb2.png used on input line 207.
+(pdftex.def)             Requested size: 150.32503pt x 144.0681pt.
+ <img/bb3.png, id=63, 941.01563pt x 904.88063pt>
+File: img/bb3.png Graphic file (type png)
 
-<img/woman2.png, id=75, 1043.39813pt x 908.64468pt>
-File: img/woman2.png Graphic file (type png)
- <use img/woman2.png>
-Package pdftex.def Info: img/woman2.png used on input line 215.
-(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
-
-<img/woman1.png, id=76, 1043.39813pt x 908.64468pt>
+<use img/bb3.png>
+Package pdftex.def Info: img/bb3.png used on input line 211.
+(pdftex.def)             Requested size: 150.32503pt x 144.54913pt.
+ <img/woman1.png, id=64, 934.24031pt x 903.375pt>
 File: img/woman1.png Graphic file (type png)
- <use img/woman1.png>
+
+<use img/woman1.png>
 Package pdftex.def Info: img/woman1.png used on input line 219.
-(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+(pdftex.def)             Requested size: 150.32503pt x 145.35623pt.
+ <img/woman2.png, id=65, 939.51pt x 900.36375pt>
+File: img/woman2.png Graphic file (type png)
 
-<img/woman4.png, id=77, 1043.39813pt x 908.64468pt>
-File: img/woman4.png Graphic file (type png)
- <use img/woman4.png>
-Package pdftex.def Info: img/woman4.png used on input line 223.
-(pdftex.def)             Requested size: 103.34666pt x 89.9963pt.
+<use img/woman2.png>
+Package pdftex.def Info: img/woman2.png used on input line 223.
+(pdftex.def)             Requested size: 150.32503pt x 144.06114pt.
+ <img/woman3.png, id=66, 938.75719pt x 898.85812pt>
+File: img/woman3.png Graphic file (type png)
 
-<img/TT3.png, id=78, 1011.78pt x 877.02657pt>
-File: img/TT3.png Graphic file (type png)
- <use img/TT3.png>
-Package pdftex.def Info: img/TT3.png used on input line 231.
-(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+<use img/woman3.png>
+Package pdftex.def Info: img/woman3.png used on input line 227.
+(pdftex.def)             Requested size: 150.32503pt x 143.92996pt.
+ <img/T1.png, id=67, 1211.52625pt x 1201.48875pt>
+File: img/T1.png Graphic file (type png)
 
-<img/TT2.png, id=79, 1011.78pt x 877.02657pt>
-File: img/TT2.png Graphic file (type png)
- <use img/TT2.png>
-Package pdftex.def Info: img/TT2.png used on input line 235.
-(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+<use img/T1.png>
+Package pdftex.def Info: img/T1.png used on input line 235.
+(pdftex.def)             Requested size: 150.32503pt x 149.0674pt.
+ <img/T2.png, id=68, 1197.47375pt x 1202.4925pt>
+File: img/T2.png Graphic file (type png)
 
-<img/TT1.png, id=80, 1011.78pt x 877.02657pt>
-File: img/TT1.png Graphic file (type png)
- <use img/TT1.png>
-Package pdftex.def Info: img/TT1.png used on input line 239.
-(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+<use img/T2.png>
+Package pdftex.def Info: img/T2.png used on input line 239.
+(pdftex.def)             Requested size: 150.32503pt x 150.95338pt.
+ <img/T3.png, id=69, 1167.36125pt x 1200.485pt>
+File: img/T3.png Graphic file (type png)
 
-<img/TT4.png, id=81, 1011.78pt x 877.02657pt>
-File: img/TT4.png Graphic file (type png)
- <use img/TT4.png>
-Package pdftex.def Info: img/TT4.png used on input line 243.
-(pdftex.def)             Requested size: 103.34666pt x 89.58131pt.
+<use img/T3.png>
+Package pdftex.def Info: img/T3.png used on input line 243.
+(pdftex.def)             Requested size: 150.32503pt x 154.58478pt.
+ <img/Y1.png, id=70, 1215.54124pt x 1201.48875pt>
+File: img/Y1.png Graphic file (type png)
 
-<img/Y3.png, id=82, 946.28531pt x 891.33pt>
-File: img/Y3.png Graphic file (type png)
- <use img/Y3.png>
-Package pdftex.def Info: img/Y3.png used on input line 251.
-(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
-
-<img/Y2.png, id=83, 946.28531pt x 891.33pt>
+<use img/Y1.png>
+Package pdftex.def Info: img/Y1.png used on input line 251.
+(pdftex.def)             Requested size: 150.32503pt x 148.5724pt.
+ <img/Y2.png, id=71, 1206.5075pt x 1204.5pt>
 File: img/Y2.png Graphic file (type png)
  <use img/Y2.png>
 Package pdftex.def Info: img/Y2.png used on input line 255.
-(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
+(pdftex.def)             Requested size: 150.32503pt x 150.06589pt.
 
-<img/Y1.png, id=84, 946.28531pt x 891.33pt>
-File: img/Y1.png Graphic file (type png)
- <use img/Y1.png>
-Package pdftex.def Info: img/Y1.png used on input line 259.
-(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
+<img/Y3.png, id=72, 1256.695pt x 1205.50375pt>
+File: img/Y3.png Graphic file (type png)
+ <use img/Y3.png>
+Package pdftex.def Info: img/Y3.png used on input line 259.
+(pdftex.def)             Requested size: 150.32503pt x 144.19434pt.
 
-<img/Y4.png, id=85, 946.28531pt x 891.33pt>
-File: img/Y4.png Graphic file (type png)
- <use img/Y4.png>
-Package pdftex.def Info: img/Y4.png used on input line 263.
-(pdftex.def)             Requested size: 103.34666pt x 97.33937pt.
-
-<img/sd3.png, id=86, 1089.31969pt x 892.83563pt>
-File: img/sd3.png Graphic file (type png)
- <use img/sd3.png>
-Package pdftex.def Info: img/sd3.png used on input line 271.
-(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
-
-<img/sd2.png, id=87, 1089.31969pt x 892.83563pt>
-File: img/sd2.png Graphic file (type png)
- <use img/sd2.png>
-Package pdftex.def Info: img/sd2.png used on input line 275.
-(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
-
-<img/sd1.png, id=88, 1089.31969pt x 892.83563pt>
+<img/sd1.png, id=73, 945.5325pt x 898.10532pt>
 File: img/sd1.png Graphic file (type png)
  <use img/sd1.png>
-Package pdftex.def Info: img/sd1.png used on input line 279.
-(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
+Package pdftex.def Info: img/sd1.png used on input line 267.
+(pdftex.def)             Requested size: 150.32503pt x 142.78162pt.
 
-<img/sd4.png, id=89, 1089.31969pt x 892.83563pt>
-File: img/sd4.png Graphic file (type png)
- <use img/sd4.png>
-Package pdftex.def Info: img/sd4.png used on input line 283.
-(pdftex.def)             Requested size: 103.34666pt x 84.69765pt.
+<img/sd2.png, id=74, 975.645pt x 898.10532pt>
+File: img/sd2.png Graphic file (type png)
+ <use img/sd2.png>
+Package pdftex.def Info: img/sd2.png used on input line 271.
+(pdftex.def)             Requested size: 150.32503pt x 138.36894pt.
 
-<img/spoon3.png, id=90, 1086.30844pt x 913.16156pt>
+<img/sd3.png, id=75, 975.645pt x 898.10532pt>
+File: img/sd3.png Graphic file (type png)
+ <use img/sd3.png>
+Package pdftex.def Info: img/sd3.png used on input line 275.
+(pdftex.def)             Requested size: 150.32503pt x 138.36894pt.
+
+<img/spoon1.png, id=76, 1194.4625pt x 1194.4625pt>
+File: img/spoon1.png Graphic file (type png)
+ <use img/spoon1.png>
+Package pdftex.def Info: img/spoon1.png used on input line 283.
+(pdftex.def)             Requested size: 150.32503pt x 150.30988pt.
+
+<img/spoon2.png, id=77, 1194.4625pt x 1194.4625pt>
+File: img/spoon2.png Graphic file (type png)
+ <use img/spoon2.png>
+Package pdftex.def Info: img/spoon2.png used on input line 287.
+(pdftex.def)             Requested size: 150.32503pt x 150.30988pt.
+
+<img/spoon3.png, id=78, 1194.4625pt x 1194.4625pt>
 File: img/spoon3.png Graphic file (type png)
  <use img/spoon3.png>
 Package pdftex.def Info: img/spoon3.png used on input line 291.
-(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
+(pdftex.def)             Requested size: 150.32503pt x 150.30988pt.
 
-<img/spoon2.png, id=91, 1086.30844pt x 913.16156pt>
-File: img/spoon2.png Graphic file (type png)
- <use img/spoon2.png>
-Package pdftex.def Info: img/spoon2.png used on input line 295.
-(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
-
-<img/spoon1.png, id=92, 1086.30844pt x 913.16156pt>
-File: img/spoon1.png Graphic file (type png)
- <use img/spoon1.png>
-Package pdftex.def Info: img/spoon1.png used on input line 299.
-(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
-
-<img/spoon4.png, id=93, 1086.30844pt x 913.16156pt>
-File: img/spoon4.png Graphic file (type png)
- <use img/spoon4.png>
-Package pdftex.def Info: img/spoon4.png used on input line 303.
-(pdftex.def)             Requested size: 103.34666pt x 86.86272pt.
-
-<img/teeth3.png, id=94, 1108.8928pt x 917.67844pt>
-File: img/teeth3.png Graphic file (type png)
- <use img/teeth3.png>
-Package pdftex.def Info: img/teeth3.png used on input line 311.
-(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
-
-<img/teeth2.png, id=95, 1108.8928pt x 917.67844pt>
-File: img/teeth2.png Graphic file (type png)
- <use img/teeth2.png>
-Package pdftex.def Info: img/teeth2.png used on input line 315.
-(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
-
-<img/teeth1.png, id=96, 1108.8928pt x 917.67844pt>
+<img/teeth1.png, id=79, 1024.57782pt x 889.07156pt>
 File: img/teeth1.png Graphic file (type png)
  <use img/teeth1.png>
-Package pdftex.def Info: img/teeth1.png used on input line 319.
-(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
+Package pdftex.def Info: img/teeth1.png used on input line 299.
+(pdftex.def)             Requested size: 150.32503pt x 130.43826pt.
 
-<img/teeth4.png, id=97, 1108.8928pt x 917.67844pt>
-File: img/teeth4.png Graphic file (type png)
- <use img/teeth4.png>
-Package pdftex.def Info: img/teeth4.png used on input line 323.
-(pdftex.def)             Requested size: 103.34666pt x 85.51404pt.
+<img/teeth2.png, id=80, 1024.57782pt x 889.07156pt>
+File: img/teeth2.png Graphic file (type png)
+ <use img/teeth2.png>
+Package pdftex.def Info: img/teeth2.png used on input line 303.
+(pdftex.def)             Requested size: 150.32503pt x 130.43826pt.
 
-<img/T1.png, id=98, 1077.27469pt x 933.4875pt>
-File: img/T1.png Graphic file (type png)
- <use img/T1.png>
-Package pdftex.def Info: img/T1.png used on input line 331.
-(pdftex.def)             Requested size: 197.29623pt x 170.95473pt.
+<img/teeth3.png, id=81, 1024.57782pt x 889.07156pt>
+File: img/teeth3.png Graphic file (type png)
+ <use img/teeth3.png>
+Package pdftex.def Info: img/teeth3.png used on input line 307.
+(pdftex.def)             Requested size: 150.32503pt x 130.43826pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
 
-<img/T2.png, id=99, 1077.27469pt x 933.4875pt>
-File: img/T2.png Graphic file (type png)
- <use img/T2.png>
-Package pdftex.def Info: img/T2.png used on input line 335.
-(pdftex.def)             Requested size: 197.29623pt x 170.95473pt.
-
-<img/ellipsoid1_bug.png, id=100, 1205.2528pt x 933.4875pt>
-File: img/ellipsoid1_bug.png Graphic file (type png)
-
-<use img/ellipsoid1_bug.png>
-Package pdftex.def Info: img/ellipsoid1_bug.png used on input line 340.
-(pdftex.def)             Requested size: 375.80542pt x 291.07315pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
- [2 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/cube3.png> <C:/Users/w
-66_000/Documents/GitHub/cshape/report/img/cube2.png> <C:/Users/w66_000/Document
-s/GitHub/cshape/report/img/cube1.png> <C:/Users/w66_000/Documents/GitHub/cshape
-/report/img/cube4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ell
-ipsoid3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ellipsoid2.pn
-g> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/ellipsoid1.png> <C:/Use
-rs/w66_000/Documents/GitHub/cshape/report/img/ellipsoid4.png> <C:/Users/w66_000
-/Documents/GitHub/cshape/report/img/bunny3.png> <C:/Users/w66_000/Documents/Git
-Hub/cshape/report/img/bunny2.png> <C:/Users/w66_000/Documents/GitHub/cshape/rep
-ort/img/bunny1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bunny4
-.png>] [3 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/U3.png> <C:/User
-s/w66_000/Documents/GitHub/cshape/report/img/U2.png> <C:/Users/w66_000/Document
-s/GitHub/cshape/report/img/U1.png> <C:/Users/w66_000/Documents/GitHub/cshape/re
-port/img/U4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bull3.png
-> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bull2.png> <C:/Users/w66
-_000/Documents/GitHub/cshape/report/img/bull1.png> <C:/Users/w66_000/Documents/
-GitHub/cshape/report/img/bull4.png> <C:/Users/w66_000/Documents/GitHub/cshape/r
-eport/img/bb3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bb2.png
-> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/bb1.png> <C:/Users/w66_0
-00/Documents/GitHub/cshape/report/img/bb4.png> <C:/Users/w66_000/Documents/GitH
-ub/cshape/report/img/woman3.png> <C:/Users/w66_000/Documents/GitHub/cshape/repo
-rt/img/woman2.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/woman1.
-png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/woman4.png>] [4 <C:/U
-sers/w66_000/Documents/GitHub/cshape/report/img/TT3.png> <C:/Users/w66_000/Docu
-ments/GitHub/cshape/report/img/TT2.png> <C:/Users/w66_000/Documents/GitHub/csha
-pe/report/img/TT1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/TT4
-.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/Y3.png> <C:/Users/w6
-6_000/Documents/GitHub/cshape/report/img/Y2.png> <C:/Users/w66_000/Documents/Gi
-tHub/cshape/report/img/Y1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report
-/img/Y4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/sd3.png> <C:/
-Users/w66_000/Documents/GitHub/cshape/report/img/sd2.png> <C:/Users/w66_000/Doc
-uments/GitHub/cshape/report/img/sd1.png> <C:/Users/w66_000/Documents/GitHub/csh
-ape/report/img/sd4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/sp
-oon3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/spoon2.png> <C:/
-Users/w66_000/Documents/GitHub/cshape/report/img/spoon1.png> <C:/Users/w66_000/
-Documents/GitHub/cshape/report/img/spoon4.png>]
-[5 <C:/Users/w66_000/Documents/GitHub/cshape/report/img/teeth3.png> <C:/Users/w
-66_000/Documents/GitHub/cshape/report/img/teeth2.png> <C:/Users/w66_000/Documen
-ts/GitHub/cshape/report/img/teeth1.png> <C:/Users/w66_000/Documents/GitHub/csha
-pe/report/img/teeth4.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/
-T1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/img/T2.png>] [6 <C:/Us
-ers/w66_000/Documents/GitHub/cshape/report/img/ellipsoid1_bug.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
-
-(C:\Users\w66_000\Documents\GitHub\cshape\report\report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+[2 <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/cube1.png> <C:/Us
+ers/w66_000/Documents/GitHub/cshape/report/Part2/img/cube2.png>] [3 <C:/Users/w
+66_000/Documents/GitHub/cshape/report/Part2/img/ellipsoid1.png> <C:/Users/w66_0
+00/Documents/GitHub/cshape/report/Part2/img/ellipsoid2.png> <C:/Users/w66_000/D
+ocuments/GitHub/cshape/report/Part2/img/ellipsoid3.png> <C:/Users/w66_000/Docum
+ents/GitHub/cshape/report/Part2/img/bunny1.png> <C:/Users/w66_000/Documents/Git
+Hub/cshape/report/Part2/img/bunny2.png> <C:/Users/w66_000/Documents/GitHub/csha
+pe/report/Part2/img/bunny3.png> <C:/Users/w66_000/Documents/GitHub/cshape/repor
+t/Part2/img/U1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/
+U2.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/U3.png>]
+[4 <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/bull1.png> <C:/Us
+ers/w66_000/Documents/GitHub/cshape/report/Part2/img/bull2.png> <C:/Users/w66_0
+00/Documents/GitHub/cshape/report/Part2/img/bull3.png> <C:/Users/w66_000/Docume
+nts/GitHub/cshape/report/Part2/img/bb1.png> <C:/Users/w66_000/Documents/GitHub/
+cshape/report/Part2/img/bb2.png> <C:/Users/w66_000/Documents/GitHub/cshape/repo
+rt/Part2/img/bb3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/im
+g/woman1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/woman2
+.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/woman3.png>]
+[5 <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/T1.png> <C:/Users
+/w66_000/Documents/GitHub/cshape/report/Part2/img/T2.png> <C:/Users/w66_000/Doc
+uments/GitHub/cshape/report/Part2/img/T3.png> <C:/Users/w66_000/Documents/GitHu
+b/cshape/report/Part2/img/Y1.png> <C:/Users/w66_000/Documents/GitHub/cshape/rep
+ort/Part2/img/Y2.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/im
+g/Y3.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/sd1.png> <
+C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/sd2.png> <C:/Users/w6
+6_000/Documents/GitHub/cshape/report/Part2/img/sd3.png>] [6 <C:/Users/w66_000/D
+ocuments/GitHub/cshape/report/Part2/img/spoon1.png> <C:/Users/w66_000/Documents
+/GitHub/cshape/report/Part2/img/spoon2.png> <C:/Users/w66_000/Documents/GitHub/
+cshape/report/Part2/img/spoon3.png> <C:/Users/w66_000/Documents/GitHub/cshape/r
+eport/Part2/img/teeth1.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Pa
+rt2/img/teeth2.png> <C:/Users/w66_000/Documents/GitHub/cshape/report/Part2/img/
+teeth3.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
+ (C:\Users\w66_000\Documents\GitHub\cshape\report\Part2\report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 5198CA8EDD73F535FDA1195F110B94E8;282.
 Package rerunfilecheck Info: File `report.brf' has not changed.
 (rerunfilecheck)             Checksum: A4F7E1FDF58BF484BD98F98BBCC04FA3;35.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
  ) 
 Here is how much of TeX's memory you used:
- 7121 strings out of 493921
- 102554 string characters out of 3144870
- 197148 words of memory out of 3000000
- 10194 multiletter control sequences out of 15000+200000
+ 6995 strings out of 493921
+ 100188 string characters out of 3144870
+ 192980 words of memory out of 3000000
+ 10100 multiletter control sequences out of 15000+200000
  11390 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,7n,29p,471b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,9n,29p,243b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
@@ -783,9 +686,9 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (6 pages, 3074008 bytes).
+Output written on report.pdf (6 pages, 1942291 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
