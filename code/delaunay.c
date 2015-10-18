@@ -48,6 +48,7 @@ void Delaunay(void)
 		ptr_v = ptr_v->next;
 	} while (ptr_v != vertices);
 
+	printf("vsize:%d\n", vsize);
 	//Allocate memory
 	pt = (coordT*)calloc(vsize * 4, sizeof(coordT));
 	all_v = (tVertex*)calloc(vsize, sizeof(tVertex));
