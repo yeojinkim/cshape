@@ -102,6 +102,7 @@ void Delaunay(void)
 			if (!(tetra->vertex[1]->ispole) && !(tetra->vertex[2]->ispole) && !(tetra->vertex[3]->ispole)) MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
 			if (!(tetra->vertex[2]->ispole) && !(tetra->vertex[3]->ispole) && !(tetra->vertex[0]->ispole)) MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
 			if (!(tetra->vertex[3]->ispole) && !(tetra->vertex[0]->ispole) && !(tetra->vertex[1]->ispole)) MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
+
 		}
 	}
 

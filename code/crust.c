@@ -19,8 +19,7 @@ extern tTetra tetras;
 
 /*-------------------------------------------------------------------*/
 
-#define POLE_MAX_THRESHOLD 10000
-#define POLE_MIN_THRESHOLD 50
+#define POLE_MAX_THRESHOLD 1000
 
 tVertex MakeCenterVertex(double* center)
 {
@@ -102,8 +101,9 @@ void FindPoleAntipole(int vsize)
 	tList voronoiVertices = NULL;
 	tVertex vorv = NULL;
 	double vorDistance = 0.0;
-	double maxDistance = 0.0;
-	double minDistance = 1e+16;
+	double maxDistance = 0.5;
+	double minProduct = 1e+16;
+	double minDistance = 0.5;
 	tVertex pole = NULL;
 	tVertex antipole = NULL;
 	tVertex normal = NULL;
@@ -118,9 +118,10 @@ void FindPoleAntipole(int vsize)
 
 	NEW(normal, tsVertex);
 
-	//compute a pole and an antipole
+	//loop through the valid cites, compute a pole and an antipole
 	cite = vertices;
 	do {
+
 		voronoiVertices = cite->vvlist;
 
 		//if there is no voronoi verticies, skip the cites. 
@@ -131,11 +132,12 @@ void FindPoleAntipole(int vsize)
 		}
 
 		//check if this cell is bounded/unbounded
+		//if vertex==NULL this cell is bounded
+		//otherwise, this cell is unbounded
 		vertex = (vertexT*)(voronoiVertices->p);
 		voronoiVertices = voronoiVertices->next;
 
 		//if voronoi cell is unbounded, find an average normal of adjacent triangles 
-		
 		if (vertex != NULL)
 		{
 			normal->v[0] = 0.0; normal->v[1] = 0.0; normal->v[2] = 0.0;
@@ -145,26 +147,21 @@ void FindPoleAntipole(int vsize)
 				for (i = 0; i < neigborcites->maxsize; i++)
 				{
 					ncite = (vertexT*)neigborcites->e[i].p;
-					if (!ncite->seen2)
-					{
-						//compute the normal of adjacent triangle with cite
-						faceNormal[0] = cite->v[0] - ncite->point[0];
-						faceNormal[1] = cite->v[1] - ncite->point[1];
-						faceNormal[2] = cite->v[2] - ncite->point[2];
-						dist = sqrt(faceNormal[0] * faceNormal[0] + faceNormal[1] * faceNormal[1] + faceNormal[2] * faceNormal[2]);
+					//Test if ncite is unbounded or bounded. if it is bounded, skip the neighbor cite
+					if (ncite->seen2 == false) continue;
 
-						faceNormal[0] /= dist;
-						faceNormal[1] /= dist;
-						faceNormal[2] /= dist;
 
-						normal->v[0] += faceNormal[0];
-						normal->v[1] += faceNormal[1];
-						normal->v[2] += faceNormal[2];
-
-						ncite->seen2 = true;
-
+					//compute the outer normal of adjacent triangle with cite
+					if (neighbor->toporient){
+						normal->v[0] -= neighbor->normal[0];
+						normal->v[1] -= neighbor->normal[1];
+						normal->v[2] -= neighbor->normal[2];
 					}
-					else continue;
+					else{
+						normal->v[0] += neighbor->normal[0];
+						normal->v[1] += neighbor->normal[1];
+						normal->v[2] += neighbor->normal[2];
+					}
 				}
 			}
 
@@ -174,7 +171,8 @@ void FindPoleAntipole(int vsize)
 			normal->v[1] /= dist;
 			normal->v[2] /= dist;
 		}
-		else //if voronoi cell is bounded, find a pole and a normal
+		//if voronoi cell is bounded, find a pole and a normal
+		else
 		{
 			do{
 				//compute the distance between a voronoi cite and a voronoi vertex
@@ -186,59 +184,61 @@ void FindPoleAntipole(int vsize)
 				{
 					pole = vorv;
 					maxDistance = vorDistance;
-				}
 
+				}
 
 				voronoiVertices = voronoiVertices->next;
 
 			} while (voronoiVertices != cite->vvlist);
 
-			if (pole != NULL)
-			{
-				if (maxDistance > POLE_MAX_THRESHOLD) pole = NULL;
-				else{
-					pole->ispole = true;
-
-					//compute normal  vector sp (s:voronoi cite, p:pole)
-					normal->v[0] = pole->v[0] - cite->v[0];
-					normal->v[1] = pole->v[1] - cite->v[1];
-					normal->v[2] = pole->v[2] - cite->v[2];
-					dist = sqrt(normal->v[0] * normal->v[0] + normal->v[1] * normal->v[1] + normal->v[2] * normal->v[2]);
-					normal->v[0] /= dist;
-					normal->v[1] /= dist;
-					normal->v[2] /= dist;
-				}
+			//Test if pole is too far away from the model  
+			if (maxDistance > POLE_MAX_THRESHOLD) pole = NULL;
+			else{
+				//compute normal vector cp (c:voronoi cite, p:pole)
+				pole->ispole = true;
+				normal->v[0] = pole->v[0] - cite->v[0];
+				normal->v[1] = pole->v[1] - cite->v[1];
+				normal->v[2] = pole->v[2] - cite->v[2];
+				dist = sqrt(normal->v[0] * normal->v[0] + normal->v[1] * normal->v[1] + normal->v[2] * normal->v[2]);
+				normal->v[0] /= dist;
+				normal->v[1] /= dist;
+				normal->v[2] /= dist;
 			}
-	
 		}
-		
+
 		//find a antipole
 		voronoiVertices = cite->vvlist;
 		voronoiVertices = voronoiVertices->next;		//skip bounded/unbounded information
 		do{
+
 			vorv = (tVertex)(voronoiVertices->p);
-			if (!(vorv->ispole))
+
+			//if a pole exists and this voronoi vertex is a pole, skip the loop
+			if (pole != NULL && SQR(vorv->v[0] - pole->v[0]) + SQR(vorv->v[1] - pole->v[1]) + SQR(vorv->v[2] - pole->v[2]) < 0.5)
 			{
-				
-				//inner product
-				vorDistance = (vorv->v[0] - cite->v[0]) * normal->v[0] + (vorv->v[1] - cite->v[1]) * normal->v[1] + (vorv->v[2] - cite->v[2]) * normal->v[2];
-			
-				if (vorDistance < minDistance)
-				{
-					antipole = vorv;
-					minDistance = vorDistance;
-				}
+				voronoiVertices = voronoiVertices->next;
+				continue;
 			}
+
+			//inner product normal with vector cv (c:voronoi cite, v:candidate antipole)
+			vorDistance = (vorv->v[0] - cite->v[0]) * normal->v[0] + (vorv->v[1] - cite->v[1]) * normal->v[1] + (vorv->v[2] - cite->v[2]) * normal->v[2];
+
+			if (vorDistance < minProduct)
+			{
+				antipole = vorv;
+				minProduct = vorDistance;
+				minDistance = qh_pointdist(vorv->v, cite->v, 3);
+			}
+
 			voronoiVertices = voronoiVertices->next;
 
 		} while (voronoiVertices != cite->vvlist);
 
 		if (antipole != NULL) {
-			if (minDistance < -POLE_MAX_THRESHOLD) antipole = NULL;
-			else antipole->ispole = true;
-	
+			if (minDistance > POLE_MAX_THRESHOLD) antipole = NULL;
+			else  antipole->ispole = true;
 		}
-		
+
 		//add a pole and an antipole to point set
 		if (pole != NULL && !HasVertex(pole))
 		{
@@ -254,13 +254,15 @@ void FindPoleAntipole(int vsize)
 
 		pole = NULL;
 		antipole = NULL;
-		maxDistance =  0.5;
-		minDistance = 1e+16;
+		maxDistance = 0.5;
+		minProduct = 1e+16;
+		minDistance = 0.5;
 		normal->v[0] = 0.0;
 		normal->v[1] = 0.0;
 		normal->v[2] = 0.0;
 		cite = cite->next;
 	} while (cite != vertices);
+
 	free(normal);
 }
 
@@ -285,7 +287,7 @@ void	Crust(void)
 	tList boundedInformation = NULL;
 	tVertex voronoiCite = NULL;
 	vertexT* neighborCites = NULL;
-	
+
 	//Count the number of points
 	ptr_v = vertices;
 	do {
@@ -326,7 +328,7 @@ void	Crust(void)
 	{
 		//Compute the volume of tetrahedron
 		volume = qh_facetarea(facet);
-	
+
 		FOREACHvertex_(facet->vertices)
 		{
 			//if this facet is lower hull and volume is bigger than 0, this tetrahderon consists of delaunay triangulation 
@@ -342,6 +344,9 @@ void	Crust(void)
 					{
 						if (neighbor->upperdelaunay)	//this is unbounded cell
 						{
+							//mark this is unbounded cell
+							vertex->seen2 = true;
+
 							//keep neighbor cites
 							neighborCites = vertex;
 						}
@@ -355,16 +360,17 @@ void	Crust(void)
 				//for degenerate case (circumesphere has 4 points), create the voronoi vertex once. 
 				if (HasVornoiVertex(voronoiCite->vvlist, facet->center))
 					continue;
-				
+
 				//copy the center of delaunay triangle and add voronoi vertex to vornoi cite		
 				center = MakeCenterVertex(facet->center);
 				voronoiVertex = MakeVoronoiVertex(center);
 				ADD(voronoiCite->vvlist, voronoiVertex);
+
 			}
 		}
 	}
 
-	//compute a pole and an antipole among vornoi verticies
+		//compute a pole and an antipole among vornoi verticies
 	FindPoleAntipole(vsize);
 
 	//compute delaunay triangulation of new points set
