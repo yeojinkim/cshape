@@ -172,7 +172,9 @@ void DrawVertices(tVertex vlist)
    
    if(vlist==NULL) return;
    glBegin(GL_POINTS);
-   do {      
+   do { 
+	   if (v->ispole) glColor3f(0.0, 1.0, 0.0);
+	   else glColor3f(1.0, 0.0, 0.0);
 	  glVertex3dv(v->v);
 	  v = v->next;
    } while ( v != vlist );
