@@ -68,6 +68,9 @@ void Delaunay(void)
 	//
 
 	qh_init_A(stdin, stdout, stderr, 0, NULL);
+	qh DELAUNAY = True;
+	qh SCALElast= True;    
+	qh KEEPcoplanar= True; 
 	qh_initflags(options);
 	qh_init_B(pt, vsize, 4, false);
 	qh_qhull();
@@ -96,13 +99,12 @@ void Delaunay(void)
 	
 		//if the normal vector of tetrahedron points downward(=lower convex hull) and the volume is not zero, 
 		//generate faces. (I didn't care about duplications of faces)
-		if (facet->normal[3] < 0 && signVolTetra != 0 )	
+		if (facet->normal[3] < 0  )	
 		{
 			if (!(tetra->vertex[0]->ispole) && !(tetra->vertex[1]->ispole) && !(tetra->vertex[2]->ispole)) MakeFace(tetra->vertex[0], tetra->vertex[1], tetra->vertex[2], NULL);
 			if (!(tetra->vertex[1]->ispole) && !(tetra->vertex[2]->ispole) && !(tetra->vertex[3]->ispole)) MakeFace(tetra->vertex[1], tetra->vertex[2], tetra->vertex[3], NULL);
 			if (!(tetra->vertex[2]->ispole) && !(tetra->vertex[3]->ispole) && !(tetra->vertex[0]->ispole)) MakeFace(tetra->vertex[2], tetra->vertex[3], tetra->vertex[0], NULL);
 			if (!(tetra->vertex[3]->ispole) && !(tetra->vertex[0]->ispole) && !(tetra->vertex[1]->ispole)) MakeFace(tetra->vertex[3], tetra->vertex[0], tetra->vertex[1], NULL);
-
 		}
 	}
 

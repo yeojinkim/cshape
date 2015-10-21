@@ -100,7 +100,6 @@ void QHull()
 
     qh_init_A(stdin, stdout, stderr, 0, NULL);
 
-    //qh DELAUNAY= True;     /* 'd'   */
     //qh SCALElast= True;    /* 'Qbb' */
     //qh KEEPcoplanar= True; /* 'Qc', to keep coplanars in 'p' */
 
