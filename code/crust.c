@@ -20,7 +20,6 @@ extern tTetra tetras;
 /*-------------------------------------------------------------------*/
 
 #define POLE_MAX_THRESHOLD 10000
-#define POLE_MIN_THRESHOLD 50
 #define ZERO 0.5
 
 tVertex MakeCenterVertex(double* center)
@@ -103,7 +102,7 @@ double InnerProduct(double* v1, double* v2)
 	return dot;
 }
 
-void FindPoleAntipole(int vsize)
+void FindPoleAntipole(int vsize, double* modelCenter)
 {
 	tVertex cite;
 	tList voronoiVertices = NULL;
@@ -119,11 +118,15 @@ void FindPoleAntipole(int vsize)
 	double dist = 0.0;
 	facetT *neighbor, **neighborp;
 	setT* neigborcites = NULL;
-	vertexT* ncite;
+	vertexT* ncite[4];
 	int id = 0;
 	int i = 0;
 	double cv[3] = { 0.0, 0.0, 0.0 };
-
+	double oc[3] = { 0.0, 0.0, 0.0 };
+	double ab[3] = { 0.0, 0.0, 0.0 };
+	double ac[3] = { 0.0, 0.0, 0.0 };
+	double faceNormal[3] = { 0.0, 0.0, 0.0 };
+	
 	NEW(normal, tsVertex);
 
 	//loop through the valid cites, compute a pole and an antipole
@@ -142,53 +145,70 @@ void FindPoleAntipole(int vsize)
 		//obtain neighbor facets
 		vertex = (vertexT*)(voronoiVertices->p);
 		voronoiVertices = voronoiVertices->next;
-
+		
 		//if voronoi cell is unbounded, find an average normal of adjacent triangles 
-		if (vertex!=NULL)
+		if (vertex != NULL)
 		{
-			normal->v[0] = 0.0; 
-			normal->v[1] = 0.0; 
+			normal->v[0] = 0.0;
+			normal->v[1] = 0.0;
 			normal->v[2] = 0.0;
-			
+
 			FOREACHneighbor_(vertex)
-			{
+			{//
 				neigborcites = neighbor->vertices;
-			
-				for (i = 0; i < neigborcites->maxsize; i++)
+
+				for (i = 0; i < 4; i++)
 				{
-					ncite = (vertexT*)neigborcites->e[i].p;
+					ncite[i] = (vertexT*)neigborcites->e[i].p;
+				}
 
-					//Test if neigbor cite is unbounded or bounded. if it is bounded, skip it.
-					if (ncite->seen2 == false) continue;
+				//compute the vector from origin to cite
+				oc[0] = vertex->point[0] - modelCenter[0];
+				oc[1] = vertex->point[1] - modelCenter[1];
+				oc[2] = vertex->point[2] - modelCenter[2];
 
-					//compute the outer normal of adjacent triangle with cite
-					if (InnerProduct(ncite->point, neighbor->normal) > ZERO)
+				//compute the outer normal of adjacent triangle with cite
+				for (i = 0; i < 4; i++)
+				{
+					if (ncite[i % 4]->seen2 && ncite[(i + 1) % 4]->seen2 && ncite[(i + 2) % 4]->seen2)
 					{
-						normal->v[0] -= neighbor->normal[0];
-						normal->v[1] -= neighbor->normal[1];
-						normal->v[2] -= neighbor->normal[2];
-					}
-					else{
-						normal->v[0] += neighbor->normal[0];
-						normal->v[1] += neighbor->normal[1];
-						normal->v[2] += neighbor->normal[2];
+						ab[0] = ncite[(i + 1) % 4]->point[0] - ncite[i % 4]->point[0];
+						ab[1] = ncite[(i + 1) % 4]->point[1] - ncite[i % 4]->point[1];
+						ab[2] = ncite[(i + 1) % 4]->point[2] - ncite[i % 4]->point[2];
+						ac[0] = ncite[(i + 2) % 4]->point[0] - ncite[i % 4]->point[0];
+						ac[1] = ncite[(i + 2) % 4]->point[1] - ncite[i % 4]->point[1];
+						ac[2] = ncite[(i + 2) % 4]->point[2] - ncite[i % 4]->point[2];
+						qh_crossproduct(3, ab, ac, faceNormal);
+
+						if (InnerProduct(oc, faceNormal) > ZERO)
+						{
+							normal->v[0] -= faceNormal[0];
+							normal->v[1] -= faceNormal[1];
+							normal->v[2] -= faceNormal[2];
+						}
+						else{
+
+							normal->v[0] += faceNormal[0];
+							normal->v[1] += faceNormal[1];
+							normal->v[2] += faceNormal[2];
+						}
+
 					}
 				}
-			}
 
+			}//
 			dist = sqrt(normal->v[0] * normal->v[0] + normal->v[1] * normal->v[1] + normal->v[2] * normal->v[2]);
 
 			normal->v[0] /= dist;
 			normal->v[1] /= dist;
 			normal->v[2] /= dist;
 		}
-		//if voronoi cell is bounded, find a pole and a normal
-		else
+		else //if voronoi cell is bounded, find a pole and a normal
 		{
 			normal->v[0] = 0.0;
 			normal->v[1] = 0.0;
 			normal->v[2] = 0.0;
-			
+
 			vorDistance = 0.0;
 
 			do{
@@ -303,7 +323,8 @@ void	Crust(void)
 	tList boundedInformation = NULL;
 	tVertex voronoiCite = NULL;
 	vertexT* neighborCites = NULL;
-
+	double modelCenter[3] = { 0.0, 0.0, 0.0 };
+	
 	//Count the number of points
 	ptr_v = vertices;
 	do {
@@ -319,13 +340,17 @@ void	Crust(void)
 	//Copy points 
 	ptr_v = vertices;
 	do {
-		pt[id++] = ptr_v->v[0];
-		pt[id++] = ptr_v->v[1];
-		pt[id++] = ptr_v->v[2];
+		pt[id++] = ptr_v->v[0];		modelCenter[0] += ptr_v->v[0];
+		pt[id++] = ptr_v->v[1];		modelCenter[1] += ptr_v->v[1];
+		pt[id++] = ptr_v->v[2];		modelCenter[2] += ptr_v->v[2];
 		pt[id++] = ptr_v->v[0] * ptr_v->v[0] + ptr_v->v[1] * ptr_v->v[1] + ptr_v->v[2] * ptr_v->v[2];
 		all_v[ptr_v->vnum] = ptr_v;
 		ptr_v = ptr_v->next;
 	} while (ptr_v != vertices);
+
+	modelCenter[0] /= vsize;
+	modelCenter[1] /= vsize;
+	modelCenter[2] /= vsize;
 
 	//
 	// compute convex hull in 3D by calling qhull
@@ -389,7 +414,7 @@ void	Crust(void)
 	}
 
 	//compute a pole and an antipole among vornoi verticies
-	FindPoleAntipole(vsize);
+	FindPoleAntipole(vsize, modelCenter);
 
 	//compute delaunay triangulation of new points set
 	//report faces of tetrahedron which ahve end points from only original point set
