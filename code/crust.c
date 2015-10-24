@@ -19,8 +19,8 @@ extern tTetra tetras;
 
 /*-------------------------------------------------------------------*/
 
-#define POLE_MAX_THRESHOLD 10000
-#define ZERO 0.5
+#define POLE_MAX_THRESHOLD 1000
+#define ZERO 0.01
 
 tVertex MakeCenterVertex(double* center)
 {
@@ -59,6 +59,7 @@ tList MakeBoundedInformation(vertexT* neigborCites)
 	return VornoiVertexList;
 }
 
+//this function check if the cite has the same voronoi vertex in its voronoi vertices list
 bool HasVornoiVertex(tList voronoiVertices, double* vertex)
 {
 	tList ptr_vorvs = voronoiVertices;
@@ -76,6 +77,7 @@ bool HasVornoiVertex(tList voronoiVertices, double* vertex)
 	return false;
 }
 
+//this function checks if the cite has bounded/unbounded information
 bool HasBoundedInformation(tList voronoiVertices)
 {
 	tList ptr_vorvs = voronoiVertices;
@@ -83,6 +85,7 @@ bool HasBoundedInformation(tList voronoiVertices)
 	return true;
 }
 
+//this function checks if we already have the same vertex in total vertices
 bool HasVertex(tVertex vertex)
 {
 	tVertex ptr_v = vertices;
@@ -142,11 +145,11 @@ void FindPoleAntipole(int vsize, double* modelCenter)
 			continue;
 		}
 
-		//obtain neighbor facets
+		//obtain neighbor facets. In case of bounded cell, this list is empty. 
 		vertex = (vertexT*)(voronoiVertices->p);
 		voronoiVertices = voronoiVertices->next;
 		
-		//if voronoi cell is unbounded, find an average normal of adjacent triangles 
+		//***** if voronoi cell is unbounded, find an average normal of adjacent triangles *****//
 		if (vertex != NULL)
 		{
 			normal->v[0] = 0.0;
@@ -154,7 +157,7 @@ void FindPoleAntipole(int vsize, double* modelCenter)
 			normal->v[2] = 0.0;
 
 			FOREACHneighbor_(vertex)
-			{//
+			{
 				neigborcites = neighbor->vertices;
 
 				for (i = 0; i < 4; i++)
@@ -196,14 +199,14 @@ void FindPoleAntipole(int vsize, double* modelCenter)
 					}
 				}
 
-			}//
+			}
 			dist = sqrt(normal->v[0] * normal->v[0] + normal->v[1] * normal->v[1] + normal->v[2] * normal->v[2]);
 
 			normal->v[0] /= dist;
 			normal->v[1] /= dist;
 			normal->v[2] /= dist;
 		}
-		else //if voronoi cell is bounded, find a pole and a normal
+		else //***** if voronoi cell is bounded, find a pole and a normal *****//
 		{
 			normal->v[0] = 0.0;
 			normal->v[1] = 0.0;
@@ -242,7 +245,7 @@ void FindPoleAntipole(int vsize, double* modelCenter)
 			}
 		}
 		
-		//find a antipole
+		//***** find a antipole *****//
 		voronoiVertices = cite->vvlist;
 		voronoiVertices = voronoiVertices->next;		//skip bounded/unbounded information
 		do{
@@ -278,7 +281,7 @@ void FindPoleAntipole(int vsize, double* modelCenter)
 			else antipole->ispole = true;
 		}
 		
-		//add a pole and an antipole to point set
+		//***** add a pole and an antipole to point set *****//
 		if (pole != NULL && !HasVertex(pole))
 		{
 			pole->vnum = vsize + id; id++;
@@ -309,7 +312,7 @@ void	Crust(void)
 	int vsize = 0;
 	int id = 0;
 
-	static char* options = (char*)"qhull v Qbb Qu QJ Pp";
+	static char* options = (char*)"qhull v Qbb Qc QJ Pp";
 	coordT *pt = NULL;
 	int curlong, totlong;
 	facetT *facet = NULL;
@@ -337,7 +340,7 @@ void	Crust(void)
 	all_v = (tVertex*)calloc(vsize, sizeof(tVertex));
 	assert(pt && all_v);
 
-	//Copy points 
+	//copy points and get the center of model 
 	ptr_v = vertices;
 	do {
 		pt[id++] = ptr_v->v[0];		modelCenter[0] += ptr_v->v[0];
@@ -377,7 +380,7 @@ void	Crust(void)
 				//obtain current voronoi cite
 				voronoiCite = all_v[qh_pointid(vertex->point)];
 
-				//If this voronoi cite doesn't initialize its bounded/unbounded information, add it. 
+				//if this voronoi cite doesn't initialize its bounded/unbounded information, add it. 
 				if (!HasBoundedInformation(voronoiCite->vvlist))
 				{
 					neighborCites = NULL;
@@ -401,7 +404,7 @@ void	Crust(void)
 					ADD(voronoiCite->vvlist, boundedInformation);
 				}
 
-				//for degenerate case (circumesphere has 4 points), create the voronoi vertex once. 
+				// create the voronoi vertex once in given cite
 				if (HasVornoiVertex(voronoiCite->vvlist, facet->center))
 					continue;
 
@@ -417,7 +420,7 @@ void	Crust(void)
 	FindPoleAntipole(vsize, modelCenter);
 
 	//compute delaunay triangulation of new points set
-	//report faces of tetrahedron which ahve end points from only original point set
+	//report faces of tetrahedron which have end points from only original point set
 	Delaunay();
 
 	free(pt);

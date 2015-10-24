@@ -1,0 +1,20 @@
+%% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
+
+
+%% Created for Jyh-Ming Lien at 2010-10-21 13:30:08 -0400
+
+
+%% Saved with string encoding Unicode (UTF-8)
+
+
+
+@book{Berg:2008:CGA:1370949,
+ author = {Berg, Mark de and Cheong, Otfried and Kreveld, Marc van and Overmars, Mark},
+ title = {Computational Geometry: Algorithms and Applications},
+ year = {2008},
+ isbn = {3540779736, 9783540779735},
+ edition = {3rd ed.},
+ publisher = {Springer-Verlag TELOS},
+ address = {Santa Clara, CA, USA},
+}
